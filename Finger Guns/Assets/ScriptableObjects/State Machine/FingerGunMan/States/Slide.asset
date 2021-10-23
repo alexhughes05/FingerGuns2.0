@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35432205b9a6a374bbbfe6b7cac92179, type: 3}
+  m_Name: Slide
+  m_EditorClassIdentifier: 
+  _actions:
+  - {fileID: 11400000, guid: ad06eedf289b3e24a9fb1bfc50459704, type: 2}
+  - {fileID: 11400000, guid: 84a96f813022ed2468114b50ac526409, type: 2}
+  - {fileID: 11400000, guid: efac207136c33214e902c5221c722db9, type: 2}
+  - {fileID: 11400000, guid: 42d4b545242b8dd439d62e371d163dd6, type: 2}
+  - {fileID: 11400000, guid: 0ed9b520367ce13498d8f32768aeb360, type: 2}
+  - {fileID: 11400000, guid: aea31ef136922aa45beea3c9c756752f, type: 2}
+  - {fileID: 11400000, guid: 211ef535f46cd6f4d996337c18e2a060, type: 2}
+  - {fileID: 11400000, guid: 77451a2e357a04d41847a71a80e8b0e6, type: 2}
+  - {fileID: 11400000, guid: 749d7e2e0d2ea3942b099d10a76f9784, type: 2}

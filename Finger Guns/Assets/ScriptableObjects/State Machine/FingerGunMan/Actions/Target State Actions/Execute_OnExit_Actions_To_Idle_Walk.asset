@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fbc95798ef0b947b998a1ee95cc600, type: 3}
+  m_Name: Execute_OnExit_Actions_To_Idle_Walk
+  m_EditorClassIdentifier: 
+  whenToRun: 1
+  actionsToExecute:
+  - {fileID: 11400000, guid: 74cf4b28aa3cf3f4b823fe3f3b84e1ba, type: 2}
+  targetStates:
+  - {fileID: 11400000, guid: e45479476ba11f247b4790a0a764a710, type: 2}
+  - {fileID: 11400000, guid: 9ac94cc3e31cbc24c8495bfdb9034c96, type: 2}
