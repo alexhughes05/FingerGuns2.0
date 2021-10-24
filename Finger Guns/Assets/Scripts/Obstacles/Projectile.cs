@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
 
     //private
     private float lifeTime;
-    private bool alreadyCollided;
+    private Vector3 localScaleVector;
 
     //Properties
     public Vector2 Direction { get; set; }
@@ -24,13 +24,14 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
+        localScaleVector = transform.localScale;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable()
     {
         lifeTime = 0f;
-        rb2d.velocity = Direction * ProjectileSpeed;
+        rb2d.velocity = Vector3.Normalize(Direction) * ProjectileSpeed;
     }
     private void Update()
     {
@@ -38,4 +39,9 @@ public class Projectile : MonoBehaviour
         if (lifeTime > maxLifetime) ShotPool.Instance.ReturnToPool(this);
     }
     #endregion
+    public void FlipProjectileXAxis()
+    {
+        localScaleVector.x *= -1;
+        transform.localScale = localScaleVector;
+    }
 }

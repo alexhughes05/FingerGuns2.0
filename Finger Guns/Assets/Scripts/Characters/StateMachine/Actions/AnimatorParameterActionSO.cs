@@ -30,7 +30,7 @@ public class AnimatorParameterAction : StateAction
 {
 	//Component references
 	private Animator _animator;
-	private StateMachine _stateMachine;
+	
 	private AnimatorParameterActionSO _originSO => (AnimatorParameterActionSO)base.OriginSO; // The SO this StateAction spawned from
 	private int _parameterHash;
 
@@ -42,14 +42,15 @@ public class AnimatorParameterAction : StateAction
 	public override void Awake(StateMachine stateMachine)
 	{
 		_animator = stateMachine.GetComponent<Animator>();
-		_stateMachine = stateMachine;
 	}
 
 	public override void OnStateEnter()
 	{
         {
 			if (_originSO.whenToRun == SpecificMoment.OnStateEnter)
+            {
 				SetParameter();
+			}
 		}
 	}
 

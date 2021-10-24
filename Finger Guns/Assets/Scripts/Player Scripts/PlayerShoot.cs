@@ -2,17 +2,16 @@
 
 public class PlayerShoot: Shoot
 {
+
     #region Variables
-    //Components and References
-    private FgmInputHandler player;
+    private PlayerAim _playerAim;
     #endregion
 
     #region Monobehaviour Callbacks 
 
     private void Awake()
     {
-        player = GetComponent<FgmInputHandler>();
-        //playerAnim = GetComponent<>();
+        _playerAim = GetComponent<PlayerAim>();
     }
 
     #endregion
@@ -20,8 +19,9 @@ public class PlayerShoot: Shoot
     #region Overidden methods
     protected override void ShootProjectile()
     {
+        TargetDirection = _playerAim.AimDirection;
         base.ShootProjectile();
-        GetComponent<Animator>().SetTrigger(FGMAnimHashes.PlayerShootingHash); //need to fix
+        GetComponent<Animator>().SetTrigger(FGMAnimHashes.PlayerShootingHash);
     }
     #endregion
 }

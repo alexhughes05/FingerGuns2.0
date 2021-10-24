@@ -13,6 +13,7 @@ public class FgmInputHandler : MonoBehaviour
     //References
     private DirectionBehaviour _directionBehaviour;
     private FgmSlideTimers _fgmSlideTimers;
+    private PlayerShoot _playerShoot;
 
     //Instance fields
     private bool _endOfJumpCriticalSection;
@@ -36,13 +37,17 @@ public class FgmInputHandler : MonoBehaviour
 
     private void Awake()
     {
-        TryGetComponent<DirectionBehaviour>(out _directionBehaviour);
+        TryGetComponent(out _directionBehaviour);
         if (_directionBehaviour == null)
             Debug.LogError("The Direction Behaviour component cannot be found.");
 
-        TryGetComponent<FgmSlideTimers>(out _fgmSlideTimers);
+        TryGetComponent(out _fgmSlideTimers);
         if (_fgmSlideTimers == null)
             Debug.LogError("The FgmSlideTimers component cannot be found.");
+
+        TryGetComponent(out _playerShoot);
+        if (_playerShoot == null)
+            Debug.LogError("The PlayerShoot component cannot be found.");
     }
 
 
@@ -57,6 +62,7 @@ public class FgmInputHandler : MonoBehaviour
         _inputReader.SlideEvent += OnSlideInitiated;
         _inputReader.FlipEvent += OnFlip;
         _inputReader.FlipCanceledEvent += OnFlipCanceled;
+        _inputReader.ShootEvent += OnShoot;
     }
 
     private void OnDisable()
@@ -76,6 +82,10 @@ public class FgmInputHandler : MonoBehaviour
     {
         //OnJumpInitiated(Time.time);
         //Debug.Log("LANDING IS CURRENTLY " + IsLandingAnimFinished());
+    }
+    private void OnShoot(Vector3 mousePos)
+    {
+        _playerShoot.Attack(mousePos);
     }
 
     private void OnStartMovingInitiated(XDirections moveDirection)
