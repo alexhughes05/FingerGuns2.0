@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
@@ -27,9 +25,11 @@ public class PlayerAim : MonoBehaviour
     //private InputReader fgmInput;
 
     //Private fields
-    private Vector3 aimDirection;
     private Vector3 mousePosition;
     private Camera cam;
+
+    //Properties
+    public Vector3 AimDirection { get; private set; }
 
     #endregion
 
@@ -52,24 +52,24 @@ public class PlayerAim : MonoBehaviour
     {
         //Get Mouse World Position
         mousePosition = cam.ScreenToWorldPoint(aimValue);
-        aimDirection = (mousePosition - playerHandRotator.transform.position).normalized;
+        AimDirection = (mousePosition - playerHandRotator.transform.position).normalized;
 
         //Aim Hand
         float angle;
         if (_directionBehaviour.FacingDirection == XDirections.Right)
         {
-            angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+            angle = Mathf.Atan2(AimDirection.y, AimDirection.x) * Mathf.Rad2Deg;
         }
         else
         {
-            angle = Mathf.Atan2(-aimDirection.y, -aimDirection.x) * Mathf.Rad2Deg;
+            angle = Mathf.Atan2(-AimDirection.y, -AimDirection.x) * Mathf.Rad2Deg;
         }
 
         playerHandRotator.eulerAngles = new Vector3(0, 0, angle);
 
         //Move Camera Target
         cameraTarget.localPosition = new Vector3(Mathf.Lerp(cameraTarget.localPosition.x,
-            aimDirection.x * lookAheadAmount, lookAheadSpeed * Time.deltaTime),
+            AimDirection.x * lookAheadAmount, lookAheadSpeed * Time.deltaTime),
             cameraTarget.localPosition.y, cameraTarget.localPosition.z);
 
         //Player Flip Condition

@@ -8,6 +8,9 @@ public class FgmInputReader : ScriptableObject, PlayerControls.IFingerGunManActi
 {
     #region Variables
 
+    //Fields
+    private Camera cam;
+
     //Gameplay Events
     #region Gameplay Events
     public event UnityAction<float> JumpEvent = delegate { };
@@ -20,7 +23,7 @@ public class FgmInputReader : ScriptableObject, PlayerControls.IFingerGunManActi
     public event UnityAction<XDirections, float> SlideCanceledEvent = delegate { };
     public event UnityAction<XDirections, float> FlipEvent = delegate { };
     public event UnityAction<XDirections> FlipCanceledEvent = delegate { };
-    public event UnityAction ShootEvent = delegate { };
+    public event UnityAction<Vector3> ShootEvent = delegate { };
     public event UnityAction<Vector2> AimEvent = delegate { };
     #endregion
 
@@ -32,6 +35,7 @@ public class FgmInputReader : ScriptableObject, PlayerControls.IFingerGunManActi
 
     private void OnEnable()
     {
+        cam = Camera.main;
         if (PlayerControls == null)
         {
             PlayerControls = new PlayerControls();
@@ -113,7 +117,7 @@ public class FgmInputReader : ScriptableObject, PlayerControls.IFingerGunManActi
     public void OnShoot(InputAction.CallbackContext context)
     {
         if (context.phase == InputActionPhase.Performed)
-            ShootEvent.Invoke();
+            ShootEvent.Invoke(cam.ScreenToWorldPoint(PlayerControls.FingerGunMan.Aim.ReadValue<Vector2>()));
     }
 
     public void OnAim(InputAction.CallbackContext context)

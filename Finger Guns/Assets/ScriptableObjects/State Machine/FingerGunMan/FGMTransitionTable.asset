@@ -94,9 +94,6 @@ MonoBehaviour:
   - FromState: {fileID: 11400000, guid: 9ac94cc3e31cbc24c8495bfdb9034c96, type: 2}
     ToState: {fileID: 11400000, guid: b16237dbc1e9b7e4c97f2150ff8c0eb3, type: 2}
     Conditions:
-    - ExpectedResult: 1
-      Condition: {fileID: 11400000, guid: 5a23e8bd5482b5448bfaa8cdb26f1252, type: 2}
-      Operator: 0
     - ExpectedResult: 0
       Condition: {fileID: 11400000, guid: d55439b1c0c83c544bf1268948430cd3, type: 2}
       Operator: 0
@@ -187,6 +184,9 @@ MonoBehaviour:
     - ExpectedResult: 0
       Condition: {fileID: 11400000, guid: 23f97c9889e43544bbe05493432484cb, type: 2}
       Operator: 0
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: 8868715b158d24e40940c73b31fad872, type: 2}
+      Operator: 0
   - FromState: {fileID: 11400000, guid: af841685946b29c48975e9c15b0d2c31, type: 2}
     ToState: {fileID: 11400000, guid: b16237dbc1e9b7e4c97f2150ff8c0eb3, type: 2}
     Conditions:
@@ -210,6 +210,9 @@ MonoBehaviour:
     Conditions:
     - ExpectedResult: 0
       Condition: {fileID: 11400000, guid: 23f97c9889e43544bbe05493432484cb, type: 2}
+      Operator: 0
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: c3200cf10f428e54e9e9ba309ea32a8a, type: 2}
       Operator: 0
   - FromState: {fileID: 11400000, guid: b16237dbc1e9b7e4c97f2150ff8c0eb3, type: 2}
     ToState: {fileID: 11400000, guid: 43ec04f99ac5ba24fa325f70f4ec3310, type: 2}
@@ -348,4 +351,13 @@ MonoBehaviour:
       Operator: 0
     - ExpectedResult: 1
       Condition: {fileID: 11400000, guid: 29cfb47a3e99a5b4cba78603b5602009, type: 2}
+      Operator: 0
+  - FromState: {fileID: 11400000, guid: bbd8e99e9dbb95d469e3113a52cc8618, type: 2}
+    ToState: {fileID: 11400000, guid: e45479476ba11f247b4790a0a764a710, type: 2}
+    Conditions:
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: 23f97c9889e43544bbe05493432484cb, type: 2}
+      Operator: 0
+    - ExpectedResult: 0
+      Condition: {fileID: 11400000, guid: a24d95f76de995145ba087bed5a3ddc1, type: 2}
       Operator: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Shoot : MonoBehaviour, IAttack
 {
     //Inspector
+    [Space]
     [Header("Firepoint")]
     [SerializeField]
     private Transform firePoint;
@@ -27,8 +28,7 @@ public abstract class Shoot : MonoBehaviour, IAttack
 
     //Properties
     public float TimeOfCurrentShot { get; set; }
-    public Vector3 TargetDirection { get; private set; }
-
+    public Vector3 TargetDirection { get; protected set; }
 
     #region Public Methods
     public void TryToShoot(Vector3 targetPos)
@@ -44,8 +44,9 @@ public abstract class Shoot : MonoBehaviour, IAttack
 
     protected virtual void ShootProjectile()
     {
-        Debug.Log("executed. Gameobject is currently " + gameObject);
         Projectile shot = ShotPool.Instance.Get();
+        if (TargetDirection.x < 0 && shot.transform.localScale.x > 0 || TargetDirection.x > 0 && shot.transform.localScale.x < 0)
+            shot.FlipProjectileXAxis();
         shot.Direction = TargetDirection;
         shot.ProjectileSpeed = muzzleVelocity;
         shot.gameObject.SetActive(true);
@@ -55,7 +56,6 @@ public abstract class Shoot : MonoBehaviour, IAttack
         //SFX
         if (!string.IsNullOrEmpty(shootRegularSound))
         {
-            Debug.Log("The value of shoot regular sound is " + shootRegularSound);
             instance = RuntimeManager.CreateInstance(shootRegularSound);
             instance.start();
             instance.release();
