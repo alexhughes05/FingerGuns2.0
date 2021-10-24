@@ -8,7 +8,6 @@ using Moment = FingerGuns.StateMachine.StateAction.SpecificMoment;
 public class ExecuteActionsForTargetStatesSO : StateActionSO
 {
     [Space]
-    [SerializeField]
     public Moment whenToRun;
     [Space]
     [SerializeField]
