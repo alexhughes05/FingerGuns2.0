@@ -41,7 +41,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
-        Debug.Log("inside currentHealth is " + CurrentHealth);
         if (CurrentHealth <= 0)
         {
             anim.SetTrigger("Death");

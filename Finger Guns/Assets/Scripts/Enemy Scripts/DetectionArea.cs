@@ -15,7 +15,7 @@ public class DetectionArea : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 10) //If collision is the the player
+        if (collision.gameObject.layer == 10) //If collision is the player
         {
             patrollingScript.TargetInAggroRange = true;
             CurrentTarget = collision.gameObject;

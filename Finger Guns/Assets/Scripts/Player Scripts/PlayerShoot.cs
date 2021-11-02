@@ -5,6 +5,7 @@ public class PlayerShoot: Shoot
 
     #region Variables
     private PlayerAim _playerAim;
+    private Animator _anim;
     #endregion
 
     #region Monobehaviour Callbacks 
@@ -12,6 +13,7 @@ public class PlayerShoot: Shoot
     private void Awake()
     {
         _playerAim = GetComponent<PlayerAim>();
+        _anim = GetComponent<Animator>();
     }
 
     #endregion
@@ -21,7 +23,7 @@ public class PlayerShoot: Shoot
     {
         TargetDirection = _playerAim.AimDirection;
         base.ShootProjectile();
-        GetComponent<Animator>().SetTrigger(FGMAnimHashes.PlayerShootingHash);
+        _anim.SetTrigger(FGMAnimHashes.PlayerShootingHash);
     }
     #endregion
 }

@@ -15,7 +15,7 @@ public class DealDamage : MonoBehaviour
         {
             damageable.TakeDamage(damage);
             Projectile projectile = gameObject.GetComponent<Projectile>();
-            if (projectile) ShotPool.Instance.ReturnToPool(projectile);
+            if (projectile) projectile.AssociatedShotPool.ReturnToPool(projectile);
         }
     }
 }

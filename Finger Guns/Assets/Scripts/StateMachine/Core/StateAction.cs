@@ -34,7 +34,7 @@ namespace FingerGuns.StateMachine
 		/// </summary>
 		public enum SpecificMoment
 		{
-			OnStateEnter, OnStateExit, OnUpdate,
+			OnStateEnter, OnStateExit, OnUpdate
 		}
 	}
 }

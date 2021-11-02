@@ -16,13 +16,35 @@ public class AnimatorParameterActionSO : StateActionSO
 	public int intValue = default;
 	public float floatValue = default;
 
+	public bool usedInStateMachine = true;
 	public Moment whenToRun = default; // Allows this StateActionSO type to be reused for all 3 state moments
 
-	protected override StateAction CreateAction() => new AnimatorParameterAction(Animator.StringToHash(parameterName));
+	private int _parameterHash;
 
-	public enum ParameterType
-	{
-		Bool, Int, Float, Trigger,
+    private void OnEnable()
+    {
+		_parameterHash = Animator.StringToHash(parameterName);
+	}
+
+    protected override StateAction CreateAction() => new AnimatorParameterAction();
+
+	public void SetParameter(Animator _animator)
+    {
+		switch (parameterType)
+		{
+			case ParameterType.Bool:
+				_animator.SetBool(_parameterHash, boolValue);
+				break;
+			case ParameterType.Int:
+				_animator.SetInteger(_parameterHash, intValue);
+				break;
+			case ParameterType.Float:
+				_animator.SetFloat(_parameterHash, floatValue);
+				break;
+			case ParameterType.Trigger:
+				_animator.SetTrigger(_parameterHash);
+				break;
+		}
 	}
 }
 
@@ -32,12 +54,6 @@ public class AnimatorParameterAction : StateAction
 	private Animator _animator;
 	
 	private AnimatorParameterActionSO _originSO => (AnimatorParameterActionSO)base.OriginSO; // The SO this StateAction spawned from
-	private int _parameterHash;
-
-	public AnimatorParameterAction(int parameterHash)
-	{
-		_parameterHash = parameterHash;
-	}
 
 	public override void Awake(StateMachine stateMachine)
 	{
@@ -49,7 +65,7 @@ public class AnimatorParameterAction : StateAction
         {
 			if (_originSO.whenToRun == SpecificMoment.OnStateEnter)
             {
-				SetParameter();
+				_originSO.SetParameter(_animator);
 			}
 		}
 	}
@@ -57,26 +73,7 @@ public class AnimatorParameterAction : StateAction
 	public override void OnStateExit()
 	{
 		if (_originSO.whenToRun == SpecificMoment.OnStateExit)
-			SetParameter();
-	}
-
-	private void SetParameter()
-	{
-		switch (_originSO.parameterType)
-		{
-			case AnimatorParameterActionSO.ParameterType.Bool:
-				_animator.SetBool(_parameterHash, _originSO.boolValue);
-				break;
-			case AnimatorParameterActionSO.ParameterType.Int:
-				_animator.SetInteger(_parameterHash, _originSO.intValue);
-				break;
-			case AnimatorParameterActionSO.ParameterType.Float:
-				_animator.SetFloat(_parameterHash, _originSO.floatValue);
-				break;
-			case AnimatorParameterActionSO.ParameterType.Trigger:
-				_animator.SetTrigger(_parameterHash);
-				break;
-		}
+			_originSO.SetParameter(_animator);
 	}
 
 	public override void OnUpdate() { }

@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour
     //Properties
     public Vector2 Direction { get; set; }
     public float ProjectileSpeed { get; set; }
+    public ShotPool AssociatedShotPool { get; set; }
 
     #endregion
 
@@ -36,7 +37,7 @@ public class Projectile : MonoBehaviour
     private void Update()
     {
         lifeTime += Time.deltaTime;
-        if (lifeTime > maxLifetime) ShotPool.Instance.ReturnToPool(this);
+        if (lifeTime > maxLifetime) AssociatedShotPool.ReturnToPool(this);
     }
     #endregion
     public void FlipProjectileXAxis()

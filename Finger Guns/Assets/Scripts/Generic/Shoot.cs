@@ -1,24 +1,18 @@
 using FMODUnity;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Shoot : MonoBehaviour, IAttack
+public class Shoot : MonoBehaviour, IAttack
 {
     //Inspector
-    [Space]
-    [Header("Firepoint")]
+    [SerializeField]
+    ShotPool shotPool;
     [SerializeField]
     private Transform firePoint;
-    [Space()]
-    [Header("Firerate")]
     [SerializeField]
     private float fireRate = 0.5f;
-    [Space()]
-    [Header("Shooter")]
     [SerializeField]
     private float muzzleVelocity;
     [Header("SFX")]
-    [SerializeField]
     [EventRef]
     public string shootRegularSound;
     private FMOD.Studio.EventInstance instance;
@@ -31,7 +25,7 @@ public abstract class Shoot : MonoBehaviour, IAttack
     public Vector3 TargetDirection { get; protected set; }
 
     #region Public Methods
-    public void TryToShoot(Vector3 targetPos)
+    private void TryToShoot(Vector3 targetPos)
     {
         if (TimeOfCurrentShot - timeOfLastShot >= fireRate)
         {
@@ -44,14 +38,15 @@ public abstract class Shoot : MonoBehaviour, IAttack
 
     protected virtual void ShootProjectile()
     {
-        Projectile shot = ShotPool.Instance.Get();
+        Projectile shot = shotPool.Get();
+        shot.AssociatedShotPool = shotPool;
         if (TargetDirection.x < 0 && shot.transform.localScale.x > 0 || TargetDirection.x > 0 && shot.transform.localScale.x < 0)
             shot.FlipProjectileXAxis();
         shot.Direction = TargetDirection;
         shot.ProjectileSpeed = muzzleVelocity;
-        shot.gameObject.SetActive(true);
         shot.transform.position = firePoint.transform.position;
         shot.transform.rotation = firePoint.transform.rotation;
+        shot.gameObject.SetActive(true);
 
         //SFX
         if (!string.IsNullOrEmpty(shootRegularSound))
@@ -61,9 +56,9 @@ public abstract class Shoot : MonoBehaviour, IAttack
             instance.release();
         }
     }
+    //Setting Animation Parameter
 
     //Interface implementations
-
     public void Attack(Vector3 target)
     {
         TimeOfCurrentShot = Time.time;

@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf6a597f3d791c4b95c60a0e2e4d380, type: 3}
-  m_Name: Set_Run_On_Enter
+  m_Script: {fileID: 11500000, guid: 30596344174e71a439562c33a5efd7fd, type: 3}
+  m_Name: Update_Flip_On_Direction_Change_On_Exit
   m_EditorClassIdentifier: 
-  parameterType: 2
-  parameterName: Walking
-  boolValue: 0
-  intValue: 0
-  floatValue: 1
-  usedInStateMachine: 0
-  whenToRun: 0

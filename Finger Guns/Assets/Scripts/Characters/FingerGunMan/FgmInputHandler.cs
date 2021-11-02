@@ -13,7 +13,7 @@ public class FgmInputHandler : MonoBehaviour
     //References
     private DirectionBehaviour _directionBehaviour;
     private FgmSlideTimers _fgmSlideTimers;
-    private PlayerShoot _playerShoot;
+    private Shoot _shoot;
 
     //Instance fields
     private bool _endOfJumpCriticalSection;
@@ -45,9 +45,9 @@ public class FgmInputHandler : MonoBehaviour
         if (_fgmSlideTimers == null)
             Debug.LogError("The FgmSlideTimers component cannot be found.");
 
-        TryGetComponent(out _playerShoot);
-        if (_playerShoot == null)
-            Debug.LogError("The PlayerShoot component cannot be found.");
+        TryGetComponent(out _shoot);
+        if (_shoot == null)
+            Debug.LogError("The Shoot component cannot be found.");
     }
 
 
@@ -85,7 +85,7 @@ public class FgmInputHandler : MonoBehaviour
     }
     private void OnShoot(Vector3 mousePos)
     {
-        _playerShoot.Attack(mousePos);
+        _shoot.Attack(mousePos);
     }
 
     private void OnStartMovingInitiated(XDirections moveDirection)

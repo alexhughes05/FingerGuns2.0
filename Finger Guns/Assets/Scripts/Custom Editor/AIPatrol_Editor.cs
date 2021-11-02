@@ -1,7 +1,4 @@
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
-
 
 #if UNITY_EDITOR
 [CustomEditor(typeof(AIPatrol))]
