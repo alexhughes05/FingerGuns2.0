@@ -10,8 +10,13 @@ public class AnimatorParameterActionSOEditor : CustomBaseEditor
 
 		serializedObject.Update();
 
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("whenToRun"));
-		EditorGUILayout.Space();
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("usedInStateMachine"));
+		SerializedProperty usedInStateMachine = serializedObject.FindProperty("usedInStateMachine");
+		if (usedInStateMachine.boolValue) 
+		{
+			EditorGUILayout.PropertyField(serializedObject.FindProperty("whenToRun"));
+			EditorGUILayout.Space();
+		}
 
 		EditorGUILayout.LabelField("Animator Parameter", EditorStyles.boldLabel);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("parameterName"), new GUIContent("Name"));
@@ -23,13 +28,13 @@ public class AnimatorParameterActionSOEditor : CustomBaseEditor
 
 		switch (animParamValue.intValue)
 		{
-			case (int)AnimatorParameterActionSO.ParameterType.Bool:
+			case (int)ParameterType.Bool:
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("boolValue"), new GUIContent("Desired value"));
 				break;
-			case (int)AnimatorParameterActionSO.ParameterType.Int:
+			case (int)ParameterType.Int:
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("intValue"), new GUIContent("Desired value"));
 				break;
-			case (int)AnimatorParameterActionSO.ParameterType.Float:
+			case (int)ParameterType.Float:
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("floatValue"), new GUIContent("Desired value"));
 				break;
 

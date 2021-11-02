@@ -1,14 +1,18 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
+using FingerGuns.StateMachine;
+using FingerGuns.StateMachine.ScriptableObjects;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
     #region Variables
-    
+
     //Inspector
     [SerializeField] int maxHealth;
     [SerializeField] private GameEvent playerDeathEventSO;
+
+    //Components and references
+    private Animator _anim;
 
     //Events
     public event EventHandler<HealthChangedArgs> HealthChanged = delegate { };
@@ -26,6 +30,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         CurrentHealth = maxHealth;
         MaxHealth = maxHealth;
+        _anim = GetComponent<Animator>();
     }
 
     #endregion
@@ -37,10 +42,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         HealthChanged(this, new HealthChangedArgs(CurrentHealth, MaxHealth));
         if (CurrentHealth == 0)
-        {
-            PlayerDead = true;
-            playerDeathEventSO.Raise();
-        }
+            Die();
+    }
+    private void Die()
+    {
+        _anim.SetTrigger(FGMAnimHashes.PlayerDeathHash);
+        playerDeathEventSO.Raise();
+        PlayerDead = true;
     }
 
     #endregion

@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLifetime: 1
+  associatedPool: {fileID: 0}
 --- !u!114 &-8372621510084694669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +151,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  possibleTargets:
-    serializedVersion: 2
-    m_Bits: 4096

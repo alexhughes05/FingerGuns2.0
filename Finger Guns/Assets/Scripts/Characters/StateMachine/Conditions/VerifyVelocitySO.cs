@@ -40,14 +40,11 @@ public class VerifyVelocity : Condition
 	
 	protected override bool Statement()
 	{
-		var result = ExpressionResult();
-		Debug.Log(result);
-		return result;
+		return ExpressionResult();
 	}
 	
 	public override void OnStateEnter()
 	{
-		Debug.Log("entered.");
 	}
 	
 	public override void OnStateExit()

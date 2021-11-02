@@ -21,7 +21,6 @@ public abstract class GenericObjectPool<T> : MonoBehaviour where T : Component
         return objects.Dequeue();
     }
 
-
     public void ReturnToPool(T objectToReturn)
     {
         objectToReturn.gameObject.SetActive(false);

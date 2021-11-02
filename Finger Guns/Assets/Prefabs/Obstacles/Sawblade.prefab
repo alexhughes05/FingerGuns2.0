@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5354365485440911551}
   - component: {fileID: 7912911522731308240}
-  - component: {fileID: 4982334996285233915}
   - component: {fileID: 8104634879469252744}
   - component: {fileID: 4155125744483935020}
+  - component: {fileID: 9204660337506104990}
+  - component: {fileID: -5284052287596010625}
+  - component: {fileID: -5877242489446320267}
+  - component: {fileID: 8749347966007137599}
   m_Layer: 15
   m_Name: Sawblade
   m_TagString: Blade
@@ -85,26 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4982334996285233915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6601261908118081095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fd6a2d46946f5f47afc718e9cb9a1f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSpawnRateInSeconds: 3
-  maxSpawnRateInSeconds: 5
-  speedOfSpin: 500
-  moveSpeed: 15
-  pathsPrefab:
-  - {fileID: 6511349331371463512, guid: 21dc768631d65c645a7b9cff71b6d5af, type: 3}
-  - {fileID: 4799639990497653289, guid: 6516e8a584e0ee34db2f34b9090728f1, type: 3}
-  - {fileID: 8209564550454882195, guid: f8ebafbe4849c1648a8ef3fad0136064, type: 3}
 --- !u!58 &8104634879469252744
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +125,66 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9204660337506104990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601261908118081095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71efb00ea17ec841ad499ea0fadc0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &-5284052287596010625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601261908118081095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7b14f8d6674b24981f414588636f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hasMaxLifetime: 1
+  _timeUntilDestroyed: 2
+--- !u!114 &-5877242489446320267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601261908118081095}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c1b473b0eefc74380722025710328d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relativeToScreen: 0
+  paths: []
+  pathsPrefab:
+  - {fileID: 6511349331371463512, guid: 21dc768631d65c645a7b9cff71b6d5af, type: 3}
+  - {fileID: 4799639990497653289, guid: 6516e8a584e0ee34db2f34b9090728f1, type: 3}
+  - {fileID: 8209564550454882195, guid: f8ebafbe4849c1648a8ef3fad0136064, type: 3}
+  navigationSpeed: 10
+  executeOnStart: 0
+--- !u!114 &8749347966007137599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601261908118081095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de77b37f92e29304895e3b0ed3e8e311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationsPerSecond: 1
+  StartSpinningWhenEnabled: 1
+  spinInDirectionOfMovement: 1
+  rotationDirection: 0
