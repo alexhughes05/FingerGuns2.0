@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{9c6b65ed-2a43-4443-bb09-7d784a6a1ea5}">
 		<property name="name">
-			<value>Shoot_Regular</value>
+			<value>Finger Gun Shoot</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f231330c-2db5-4e45-9abb-cf3ff47bf109}</destination>
+			<destination>{8e32dd42-eb33-4d96-b17c-b258b73fcd6f}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{46612228-b925-43b0-baf6-07899b678a4a}</destination>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DAWAsset" id="{d9ecb231-2543-46ab-946c-28610f0e94a0}">
+		<property name="assetPath">
+			<value>FingerGuns_SFX.rpp.link/Ghosty Boi_Damage.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e22e4c50-09ac-4ef4-986b-8c98412ee9e2}</destination>
+		</relationship>
+		<relationship name="project">
+			<destination>{7ca00ba5-2001-4464-b828-cdad5de9066c}</destination>
+		</relationship>
+	</object>
+</objects>

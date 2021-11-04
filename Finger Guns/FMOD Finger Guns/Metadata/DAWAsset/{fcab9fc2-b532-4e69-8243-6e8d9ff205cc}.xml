@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DAWAsset" id="{fcab9fc2-b532-4e69-8243-6e8d9ff205cc}">
+		<property name="assetPath">
+			<value>FingerGuns_SFX.rpp.link/Explodey One_Death.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e22e4c50-09ac-4ef4-986b-8c98412ee9e2}</destination>
+		</relationship>
+		<relationship name="project">
+			<destination>{7ca00ba5-2001-4464-b828-cdad5de9066c}</destination>
+		</relationship>
+	</object>
+</objects>
