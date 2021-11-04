@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hasMaxLifetime: 1
-  _timeUntilDestroyed: 2
+  _timeUntilDestroyed: 5
 --- !u!114 &-5877242489446320267
 MonoBehaviour:
   m_ObjectHideFlags: 0
