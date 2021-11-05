@@ -5,7 +5,7 @@ public class Shoot : MonoBehaviour, IAttack
 {
     //Inspector
     [SerializeField]
-    ShotPool shotPool;
+    GameObjectPool shotPool;
     [SerializeField]
     private Transform firePoint;
     [SerializeField]
@@ -38,8 +38,8 @@ public class Shoot : MonoBehaviour, IAttack
 
     protected virtual void ShootProjectile()
     {
-        Projectile shot = shotPool.Get();
-        shot.AssociatedShotPool = shotPool;
+        Projectile shot = shotPool.Get().GetComponent<Projectile>();
+        shot.AssociatedPool = shotPool;
         if (TargetDirection.x < 0 && shot.transform.localScale.x > 0 || TargetDirection.x > 0 && shot.transform.localScale.x < 0)
             shot.FlipProjectileXAxis();
         shot.Direction = TargetDirection;

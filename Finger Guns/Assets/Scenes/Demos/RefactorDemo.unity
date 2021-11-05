@@ -485,30 +485,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1e68f190485ba40b531577dd1caf48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: -5284052287596010625, guid: c3e22ed8d3ed0dc44a6f0c763a604c77, type: 3}
+  prefab: {fileID: 6601261908118081095, guid: c3e22ed8d3ed0dc44a6f0c763a604c77, type: 3}
+  spawnRateValueType: 0
+  spawnRateInSeconds: 1
   _minSpawnRateInSeconds: 1
-  _maxSpawnRateInSeconds: 1
-  _spawnType: 1
+  _maxSpawnRateInSeconds: 5
+  _spawnType: 0
   _possibleTransformSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
+    spawnPointValueType: 0
     transformSpawnPoint: {fileID: 935067687}
-  - initialVelocity: {x: -10, y: -5}
-    transformSpawnPoint: {fileID: 1524873304}
-  - initialVelocity: {x: 7, y: 5}
-    transformSpawnPoint: {fileID: 590329116}
+    topLeftTransform: {fileID: 935067687}
+    bottomRightTransform: {fileID: 1524873304}
   _possibleRelativeSpawnPoints:
-  - initialVelocity: {x: 15, y: 0}
+  - initialVelocity: {x: 15, y: -5}
+    spawnPointValueType: 1
     screenPosition: {x: 0, y: 50}
-  - initialVelocity: {x: -15, y: 0}
-    screenPosition: {x: 100, y: 50}
-  - initialVelocity: {x: 5, y: 0}
-    screenPosition: {x: 21.2, y: 69.3}
-  - initialVelocity: {x: -12, y: 5}
-    screenPosition: {x: 76.3, y: 19.6}
-  - initialVelocity: {x: -9, y: 3}
-    screenPosition: {x: 67.8, y: 50}
-  - initialVelocity: {x: 8, y: 10}
-    screenPosition: {x: 33.7, y: 0}
+    minScreenWidth: 0
+    maxScreenWidth: 50
+    minScreenHeight: 50.00003
+    maxScreenHeight: 100
+    screenWidthPosOffset: 0
+    screenHeightPosOffset: 0
+    minScreenWidthOffset: -10
+    maxScreenWidthOffset: 0
+    minScreenHeightOffset: 0
+    maxScreenHeightOffset: 0
+  - initialVelocity: {x: -15, y: 5}
+    spawnPointValueType: 1
+    screenPosition: {x: 0, y: 50}
+    minScreenWidth: 49.999985
+    maxScreenWidth: 100
+    minScreenHeight: 0
+    maxScreenHeight: 49.99997
+    screenWidthPosOffset: 0
+    screenHeightPosOffset: 0
+    minScreenWidthOffset: -10
+    maxScreenWidthOffset: 0
+    minScreenHeightOffset: 0
+    maxScreenHeightOffset: 0
 --- !u!114 &524088084 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2367880288101811890, guid: 29a0a1421a5579044a39ca943ab06a0a,
@@ -747,6 +762,25 @@ Transform:
   m_Father: {fileID: 427778916}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &975615729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5967763035601554794, guid: ef09da97da99e7044ac803a137b23054,
+    type: 3}
+  m_PrefabInstance: {fileID: 7544697591765386546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &975615731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975615729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b9c7defcec7724097869cd51f93cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5858298368082820291, guid: 4ae755b6f0e7ea44684f1486e0522fa3, type: 3}
 --- !u!114 &986637083 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7623663529454610685, guid: 29a0a1421a5579044a39ca943ab06a0a,
@@ -1928,7 +1962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5641730516028976527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.53, y: -2.2680678, z: -0}
+  m_LocalPosition: {x: -13.2, y: -2.2680678, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6573623202390857487}
@@ -2060,7 +2094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &5641730516028976528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,7 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40711b462dbf6740955bc1783c5e391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPool: {fileID: 1766508537}
+  shotPool: {fileID: 0}
   firePoint: {fileID: 3930181857141683874}
   fireRate: 0.5
   muzzleVelocity: 30
@@ -2306,11 +2340,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5035373382043006877, guid: ef09da97da99e7044ac803a137b23054,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.9
-      objectReference: {fileID: 0}
     - target: {fileID: 5967763036530571554, guid: ef09da97da99e7044ac803a137b23054,
         type: 3}
       propertyPath: m_RootOrder
@@ -2371,7 +2400,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYER
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5967763035601554793, guid: ef09da97da99e7044ac803a137b23054, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef09da97da99e7044ac803a137b23054, type: 3}
 --- !u!1 &7556205115426245737
 GameObject:

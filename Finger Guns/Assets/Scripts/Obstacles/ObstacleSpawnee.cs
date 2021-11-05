@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ObstacleSpawnee : MonoBehaviour
+public class ObstacleSpawnee : MonoBehaviour, IPoolable
 {
     #region Variables
     //Inspector
@@ -20,7 +20,7 @@ public class ObstacleSpawnee : MonoBehaviour
     private float _endOfLifeTime;
 
     //Properties
-    public ObstacleSpawneePool AssociatedSpawneePool { get; set; }
+    public GameObjectPool AssociatedPool { get; set; }
     #endregion
 
     private void Awake()
@@ -35,7 +35,7 @@ public class ObstacleSpawnee : MonoBehaviour
         if (_hasMaxLifetime)
         {
             if (Time.time >= _endOfLifeTime)
-                AssociatedSpawneePool.ReturnToPool(this);
+                AssociatedPool.ReturnToPool(gameObject);
         }
     }
     

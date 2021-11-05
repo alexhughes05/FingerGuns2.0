@@ -34,7 +34,6 @@ public class SpinObject_Editor : Editor
             rotationDirection.enumValueIndex = (int)selectedRotationDirection;
             EditorGUILayout.EndHorizontal();
         }
-        //EditorGUI.indentLevel--;
 
         serializedObject.ApplyModifiedProperties();
     }

@@ -60,8 +60,8 @@ public class ObstacleSpawner : MonoBehaviour
                 StartCoroutine(obstaclePool.SetPoolBackToReadyAfterDelay());
                 ObstaclePoolsReadyForUse.Remove(obstaclePool);
                 _obstaclePoolsPending.Add(obstaclePool);
-                ObstacleSpawnee obstacle = obstaclePool.Get();
-                obstacle.AssociatedSpawneePool = obstaclePool;
+                ObstacleSpawnee obstacle = obstaclePool.Get().GetComponent<ObstacleSpawnee>();
+                obstacle.AssociatedPool = obstaclePool;
                 obstacle.SetEndOfLifeTime();
                 SpawnPoint spawnPoint = obstaclePool.GetNextSpawnPoint();
                 obstacle.SetSpawnLocation(obstaclePool.GetNextSpawnLocation(spawnPoint));
