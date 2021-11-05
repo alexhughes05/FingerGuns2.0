@@ -1,27 +1,26 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class GenericObjectPool<T> : MonoBehaviour where T : Component
+public class GameObjectPool : MonoBehaviour
 {
     [SerializeField]
-    private T prefab;
+    private GameObject prefab;
 
-    public static GenericObjectPool<T> Instance { get; private set; }
-    private readonly Queue<T> objects = new Queue<T>();
+    public static GameObjectPool Instance { get; private set; }
+    private readonly Queue<GameObject> objects = new Queue<GameObject>();
     private void Awake()
     {
         Instance = this;
     }
 
-    public T Get()
+    public GameObject Get()
     {
         if (objects.Count == 0)
             AddObjects(1);
         return objects.Dequeue();
     }
 
-    public void ReturnToPool(T objectToReturn)
+    public void ReturnToPool(GameObject objectToReturn)
     {
         objectToReturn.gameObject.SetActive(false);
         objects.Enqueue(objectToReturn);
@@ -30,10 +29,10 @@ public abstract class GenericObjectPool<T> : MonoBehaviour where T : Component
     {
         for (int i = 0; i < count; i++)
         {
-            T newObject = Instantiate(prefab, gameObject.transform);
+            GameObject newObject = Instantiate(prefab, gameObject.transform);
             newObject.gameObject.SetActive(false);
             objects.Enqueue(newObject);
-            //newObject.GetComponent<IPoolable>().AssociatedPool = this;
+            newObject.GetComponent<IPoolable>().AssociatedPool = this;
         }
     }
 }
