@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : MonoBehaviour, IPoolable
 {
+
+    public GameObjectPool AssociatedPool {get; set;}
     #region
     //Inspector
     [SerializeField]
@@ -17,8 +19,6 @@ public class Projectile : MonoBehaviour
     //Properties
     public Vector2 Direction { get; set; }
     public float ProjectileSpeed { get; set; }
-    public ShotPool AssociatedShotPool { get; set; }
-
     #endregion
 
     #region Monobehaviour Callbacks
@@ -37,7 +37,8 @@ public class Projectile : MonoBehaviour
     private void Update()
     {
         lifeTime += Time.deltaTime;
-        if (lifeTime > maxLifetime) AssociatedShotPool.ReturnToPool(this);
+        if (lifeTime > maxLifetime)
+            AssociatedPool.ReturnToPool(gameObject);
     }
     #endregion
     public void FlipProjectileXAxis()
@@ -45,4 +46,9 @@ public class Projectile : MonoBehaviour
         localScaleVector.x *= -1;
         transform.localScale = localScaleVector;
     }
+}
+
+internal interface IPoolable 
+{
+    public GameObjectPool AssociatedPool { get; set; }
 }

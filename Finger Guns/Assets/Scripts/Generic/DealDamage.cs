@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DealDamage : MonoBehaviour
@@ -10,12 +8,15 @@ public class DealDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+        var root = collision.gameObject.transform.root;
+        IDamageable damageable = root.GetComponentInChildren<IDamageable>();
+
         if (damageable != null)
         {
             damageable.TakeDamage(damage);
-            Projectile projectile = gameObject.GetComponent<Projectile>();
-            if (projectile) projectile.AssociatedShotPool.ReturnToPool(projectile);
+
+            IPoolable poolable = gameObject.GetComponent<IPoolable>();
+            if (poolable != null) poolable.AssociatedPool.ReturnToPool(gameObject);
         }
     }
 }
