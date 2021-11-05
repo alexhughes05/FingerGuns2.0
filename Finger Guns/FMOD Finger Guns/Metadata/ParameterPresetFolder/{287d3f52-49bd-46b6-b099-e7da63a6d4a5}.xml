@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPresetFolder" id="{287d3f52-49bd-46b6-b099-e7da63a6d4a5}">
+		<property name="name">
+			<value>Enemy Params</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7cd889bf-ab2f-4754-8c9e-1d365fa30014}</destination>
+		</relationship>
+	</object>
+</objects>

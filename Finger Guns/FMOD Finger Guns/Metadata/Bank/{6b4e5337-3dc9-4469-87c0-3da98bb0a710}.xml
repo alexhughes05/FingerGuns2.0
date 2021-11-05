@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
-	<object class="EventFolder" id="{d10acdf3-e3fd-480d-87b7-d349cf2732a9}">
-		<property name="color">
-			<value>Green Light 1</value>
-		</property>
+	<object class="Bank" id="{6b4e5337-3dc9-4469-87c0-3da98bb0a710}">
 		<property name="name">
 			<value>Environmental Hazards</value>
 		</property>
 		<relationship name="folder">
-			<destination>{f231330c-2db5-4e45-9abb-cf3ff47bf109}</destination>
+			<destination>{aa2a0df1-6878-43c2-aec4-7ce1093b6e97}</destination>
 		</relationship>
 	</object>
 </objects>

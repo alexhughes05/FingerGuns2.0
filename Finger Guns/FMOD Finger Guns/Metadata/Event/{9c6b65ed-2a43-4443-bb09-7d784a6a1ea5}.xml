@@ -2,13 +2,16 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{9c6b65ed-2a43-4443-bb09-7d784a6a1ea5}">
 		<property name="name">
-			<value>Finger Gun Shoot</value>
+			<value>FGM_Finger Gun Shoot</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8e32dd42-eb33-4d96-b17c-b258b73fcd6f}</destination>
+		</relationship>
+		<relationship name="tags">
+			<destination>{c1aef283-41a8-4dcf-9076-235581bdad58}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{46612228-b925-43b0-baf6-07899b678a4a}</destination>
@@ -33,6 +36,7 @@
 		</relationship>
 		<relationship name="banks">
 			<destination>{e057e2cf-172e-43bf-81c8-fb54766028f2}</destination>
+			<destination>{046db89a-19ff-44a3-9867-663421ae3975}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{46612228-b925-43b0-baf6-07899b678a4a}">

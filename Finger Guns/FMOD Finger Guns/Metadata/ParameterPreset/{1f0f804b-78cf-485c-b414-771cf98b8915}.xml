@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{1f0f804b-78cf-485c-b414-771cf98b8915}">
+		<property name="name">
+			<value>Beegman Attack</value>
+		</property>
+		<relationship name="folder">
+			<destination>{287d3f52-49bd-46b6-b099-e7da63a6d4a5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9847ad34-dc3e-44f9-b8b2-e6fe7718b731}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9847ad34-dc3e-44f9-b8b2-e6fe7718b731}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Charge</value>
+			<value>Attack</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

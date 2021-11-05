@@ -2,13 +2,16 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{e21540ab-20b2-474b-95dd-7538c04236bf}">
 		<property name="name">
-			<value>Footsteps</value>
+			<value>FGM_Footsteps</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8e32dd42-eb33-4d96-b17c-b258b73fcd6f}</destination>
+		</relationship>
+		<relationship name="tags">
+			<destination>{c1aef283-41a8-4dcf-9076-235581bdad58}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{a2a6499a-9522-4141-855d-168f17d75c85}</destination>
@@ -33,6 +36,7 @@
 		</relationship>
 		<relationship name="banks">
 			<destination>{e057e2cf-172e-43bf-81c8-fb54766028f2}</destination>
+			<destination>{046db89a-19ff-44a3-9867-663421ae3975}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{a2a6499a-9522-4141-855d-168f17d75c85}">

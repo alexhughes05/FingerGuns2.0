@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{007ab59b-caf6-4edd-ab1f-79f553eec064}">
+		<property name="name">
+			<value>Explodey Attack</value>
+		</property>
+		<relationship name="folder">
+			<destination>{287d3f52-49bd-46b6-b099-e7da63a6d4a5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{087b2cf0-4b73-4edd-a4b3-920b6ba3cc3f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{087b2cf0-4b73-4edd-a4b3-920b6ba3cc3f}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Charge</value>
+			<value>Attack</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

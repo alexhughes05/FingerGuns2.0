@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{a8da28fa-f20c-47a9-b564-15f04e054116}">
+		<property name="name">
+			<value>Damage Type</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5bd16c26-16aa-4391-a39f-fa45e00f460e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9d23d0a8-df3b-4771-8e15-b7b492be037d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9d23d0a8-df3b-4771-8e15-b7b492be037d}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Impact</value>
+			<value>Fire</value>
+			<value>Water</value>
+			<value>Electric</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

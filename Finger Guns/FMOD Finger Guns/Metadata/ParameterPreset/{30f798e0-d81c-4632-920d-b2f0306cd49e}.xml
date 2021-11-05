@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{30f798e0-d81c-4632-920d-b2f0306cd49e}">
+		<property name="name">
+			<value>Volcano Eruption</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8f0cf440-5794-423e-837e-71a9147771ad}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{60f5f75c-0a16-4064-a5cc-170286c2f794}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{60f5f75c-0a16-4064-a5cc-170286c2f794}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Rumble</value>
+			<value>Explosion</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

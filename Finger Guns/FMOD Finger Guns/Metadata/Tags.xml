@@ -4,5 +4,49 @@
 		<property name="name">
 			<value>Master</value>
 		</property>
+		<relationship name="items">
+			<destination>{c1aef283-41a8-4dcf-9076-235581bdad58}</destination>
+			<destination>{3e39c0cb-beda-4d40-aa7c-d9a2b33084e8}</destination>
+			<destination>{c18e6b45-15d8-447f-aeeb-f525b4f265c3}</destination>
+			<destination>{1039f22a-14eb-4e10-8797-a1a1c9987d61}</destination>
+			<destination>{556ecab0-87a2-4eaa-8a92-4aaf6f7baa76}</destination>
+			<destination>{ad0eda44-2d53-4d2f-80af-783205fb7913}</destination>
+			<destination>{3c9c73b3-8f7f-4f78-8c61-a8407cd8d249}</destination>
+		</relationship>
+	</object>
+	<object class="Tag" id="{c1aef283-41a8-4dcf-9076-235581bdad58}">
+		<property name="name">
+			<value>FingerGunMan</value>
+		</property>
+	</object>
+	<object class="Tag" id="{3e39c0cb-beda-4d40-aa7c-d9a2b33084e8}">
+		<property name="name">
+			<value>Enemies</value>
+		</property>
+	</object>
+	<object class="Tag" id="{c18e6b45-15d8-447f-aeeb-f525b4f265c3}">
+		<property name="name">
+			<value>GhostyBoi</value>
+		</property>
+	</object>
+	<object class="Tag" id="{1039f22a-14eb-4e10-8797-a1a1c9987d61}">
+		<property name="name">
+			<value>ExplodeyOne</value>
+		</property>
+	</object>
+	<object class="Tag" id="{556ecab0-87a2-4eaa-8a92-4aaf6f7baa76}">
+		<property name="name">
+			<value>Beegman</value>
+		</property>
+	</object>
+	<object class="Tag" id="{ad0eda44-2d53-4d2f-80af-783205fb7913}">
+		<property name="name">
+			<value>EnvironmentalHazards</value>
+		</property>
+	</object>
+	<object class="Tag" id="{3c9c73b3-8f7f-4f78-8c61-a8407cd8d249}">
+		<property name="name">
+			<value>UI</value>
+		</property>
 	</object>
 </objects>
