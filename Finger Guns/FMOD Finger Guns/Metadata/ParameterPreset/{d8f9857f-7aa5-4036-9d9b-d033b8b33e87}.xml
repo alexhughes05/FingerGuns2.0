@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{d8f9857f-7aa5-4036-9d9b-d033b8b33e87}">
+		<property name="name">
+			<value>Wall Distance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8f0cf440-5794-423e-837e-71a9147771ad}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7e12b6e8-4285-4524-bdff-2850710db6de}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7e12b6e8-4285-4524-bdff-2850710db6de}">
+		<property name="minimum">
+			<value>-1</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
