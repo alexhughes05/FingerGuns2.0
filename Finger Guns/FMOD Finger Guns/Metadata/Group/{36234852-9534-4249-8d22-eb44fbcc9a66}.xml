@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{36234852-9534-4249-8d22-eb44fbcc9a66}">
+		<property name="name">
+			<value>Ghosty Boi</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{e5535f11-2d4b-4def-b4d4-92128b5bf08f}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{d1d79031-065c-4b19-b053-d19d25876ccb}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{f135456f-e40e-4710-acd4-21d3d6046cdf}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{e5535f11-2d4b-4def-b4d4-92128b5bf08f}">
+		<relationship name="effects">
+			<destination>{619e6aca-be06-4e8c-a8c0-80798b01ec54}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{d1d79031-065c-4b19-b053-d19d25876ccb}" />
+	<object class="MixerBusFader" id="{619e6aca-be06-4e8c-a8c0-80798b01ec54}" />
+</objects>

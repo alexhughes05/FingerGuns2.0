@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{39db7b02-bb3e-4cfb-b358-42ac38c2ae49}">
+		<property name="name">
+			<value>Scene Switch (Gradual)</value>
+		</property>
+		<relationship name="folder">
+			<destination>{30fa3dca-dbd2-4efc-970b-0e6510ef1935}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7216fb0f-2c22-4cdf-abf6-aadd767fc19b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7216fb0f-2c22-4cdf-abf6-aadd767fc19b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.99600005149841309</value>
+		</property>
+	</object>
+</objects>

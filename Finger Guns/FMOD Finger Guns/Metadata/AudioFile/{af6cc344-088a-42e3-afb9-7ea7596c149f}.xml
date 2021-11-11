@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{af6cc344-088a-42e3-afb9-7ea7596c149f}">
+		<property name="assetPath">
+			<value>Music/FingerGuns_Level 1 – Wall.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>159</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e22e4c50-09ac-4ef4-986b-8c98412ee9e2}</destination>
+		</relationship>
+	</object>
+</objects>

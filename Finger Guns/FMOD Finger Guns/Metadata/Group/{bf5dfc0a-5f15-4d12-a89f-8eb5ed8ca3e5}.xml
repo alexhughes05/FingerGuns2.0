@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{bf5dfc0a-5f15-4d12-a89f-8eb5ed8ca3e5}">
+		<property name="name">
+			<value>Explodey One</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{c5e2d29f-45c3-4994-924f-03a6c866ca93}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{f47379a0-c3e6-45e7-aea9-a6c13ec135e6}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{f135456f-e40e-4710-acd4-21d3d6046cdf}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{c5e2d29f-45c3-4994-924f-03a6c866ca93}">
+		<relationship name="effects">
+			<destination>{c1b06b91-fd2c-4003-8d6f-d7c697679e76}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{f47379a0-c3e6-45e7-aea9-a6c13ec135e6}" />
+	<object class="MixerBusFader" id="{c1b06b91-fd2c-4003-8d6f-d7c697679e76}" />
+</objects>

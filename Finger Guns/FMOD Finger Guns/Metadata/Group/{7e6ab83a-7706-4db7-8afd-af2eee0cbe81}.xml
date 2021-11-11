@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{7e6ab83a-7706-4db7-8afd-af2eee0cbe81}">
+		<property name="name">
+			<value>Beegman</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{4c41f0bd-65c5-4865-939b-6b7f7f8215bc}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{3f7f9b0c-9e9f-4346-9c6d-5a76b3b3bb17}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{f135456f-e40e-4710-acd4-21d3d6046cdf}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{4c41f0bd-65c5-4865-939b-6b7f7f8215bc}">
+		<relationship name="effects">
+			<destination>{334cc6c2-55f1-443f-968d-21cf2d840102}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{3f7f9b0c-9e9f-4346-9c6d-5a76b3b3bb17}" />
+	<object class="MixerBusFader" id="{334cc6c2-55f1-443f-968d-21cf2d840102}" />
+</objects>
