@@ -14,18 +14,18 @@ public class SetVelocitySO : StateActionSO
 	private float desiredVelocity;
 	[Space]
 	[SerializeField]
-	private Axis applyToAxis;
+	private VelocityAxis applyToAxis;
 	protected override StateAction CreateAction() => new SetVelocity(whenToRun, applyToAxis, desiredVelocity);
 }
 
 public class SetVelocity : StateAction
 {
 	private readonly Moment _whenToRun;
-	private readonly Axis _applyToAxis;
+	private readonly VelocityAxis _applyToAxis;
 	private readonly float _desiredVelocity;
 	private Rigidbody2D _rb2d;
 	private Vector2 _velocity;
-	public SetVelocity(Moment whenToRun, Axis applyToAxis, float desiredVelocity)
+	public SetVelocity(Moment whenToRun, VelocityAxis applyToAxis, float desiredVelocity)
     {
 		_whenToRun = whenToRun;
 		_applyToAxis = applyToAxis;
@@ -55,27 +55,27 @@ public class SetVelocity : StateAction
 		SetVelocityOfSpecifiedAxis(SpecificMoment.OnStateExit, _applyToAxis);
 	}
 
-	private void SetVelocityOfSpecifiedAxis(Moment specifiedMoment, Axis specifiedAxis)
+	private void SetVelocityOfSpecifiedAxis(Moment specifiedMoment, VelocityAxis specifiedAxis)
     {
 		if (specifiedMoment == _whenToRun)
         {
 			switch (specifiedAxis)
             {
-				case Axis.X:
+				case VelocityAxis.X:
                     {
 						_velocity.x = _desiredVelocity;
 						_velocity.y = _rb2d.velocity.y;
 						_rb2d.velocity = _velocity;
                     }
 					break;
-				case Axis.Y:
+				case VelocityAxis.Y:
 					{
 						_velocity.x = _rb2d.velocity.x;
 						_velocity.y = _desiredVelocity;
 						_rb2d.velocity = _velocity;
 					}
 					break;
-				case Axis.XY:
+				case VelocityAxis.XY:
 					{
 						_velocity.x = _desiredVelocity;
 						_velocity.y = _desiredVelocity;
@@ -86,7 +86,7 @@ public class SetVelocity : StateAction
         }
     }
 }
-public enum Axis
+public enum VelocityAxis
 {
 	X,
 	Y,

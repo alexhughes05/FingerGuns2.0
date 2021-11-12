@@ -14,9 +14,9 @@ public class HealthDisplay : MonoBehaviour
     private Image[] hearts;
 
     //Components and References
-    private PlayerHealth playerHealth;
+    private Health playerHealth;
 
-    private void Awake() => playerHealth = FindObjectOfType<PlayerHealth>();
+    private void Awake() => playerHealth = FindObjectOfType<Health>();
 
     private void Start() //Want to change later.
     {

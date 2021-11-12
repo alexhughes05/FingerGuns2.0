@@ -1,4 +1,4 @@
-public enum InputDirections
+public enum Directions2D
 {
     PositiveX,
     PositiveY,

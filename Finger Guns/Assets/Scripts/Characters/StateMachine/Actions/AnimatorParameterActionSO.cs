@@ -16,7 +16,6 @@ public class AnimatorParameterActionSO : StateActionSO
 	public int intValue = default;
 	public float floatValue = default;
 
-	public bool usedInStateMachine = true;
 	public Moment whenToRun = default; // Allows this StateActionSO type to be reused for all 3 state moments
 
 	private int _parameterHash;

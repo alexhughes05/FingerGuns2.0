@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35432205b9a6a374bbbfe6b7cac92179, type: 3}
-  m_Name: Die
+  m_Script: {fileID: 11500000, guid: ebf6a597f3d791c4b95c60a0e2e4d380, type: 3}
+  m_Name: Set_Die_Anim_On_Enter
   m_EditorClassIdentifier: 
-  _actions:
-  - {fileID: 11400000, guid: 4cbb0ffc176d0814ab7a8007f311eae6, type: 2}
-  - {fileID: 11400000, guid: 84a96f813022ed2468114b50ac526409, type: 2}
+  parameterType: 3
+  parameterName: Death
+  boolValue: 0
+  intValue: 0
+  floatValue: 0
+  whenToRun: 0

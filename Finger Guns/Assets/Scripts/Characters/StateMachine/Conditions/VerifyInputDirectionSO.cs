@@ -6,17 +6,17 @@ using FingerGuns.StateMachine.ScriptableObjects;
 public class VerifyInputDirectionSO : StateConditionSO
 {
 	[SerializeField]
-	private InputDirections direction;
+	private Directions2D direction;
 	protected override Condition CreateCondition() => new VerifyInputDirection(direction);
 }
 
 public class VerifyInputDirection : Condition
 {
-	private InputDirections _direction;
+	private Directions2D _direction;
 	private Rigidbody2D _rb2d;
 
 
-	public VerifyInputDirection(InputDirections direction) => _direction = direction;
+	public VerifyInputDirection(Directions2D direction) => _direction = direction;
 
 	public override void Awake(StateMachine stateMachine)
 	{
@@ -28,15 +28,15 @@ public class VerifyInputDirection : Condition
 		bool velocityMatchesDirection = false;
 		switch (_direction)
         {
-			case InputDirections.PositiveY: velocityMatchesDirection = _rb2d.velocity.y > 0;
+			case Directions2D.PositiveY: velocityMatchesDirection = _rb2d.velocity.y > 0;
                 break;
-			case InputDirections.NegativeY: velocityMatchesDirection = _rb2d.velocity.y < 0;
+			case Directions2D.NegativeY: velocityMatchesDirection = _rb2d.velocity.y < 0;
 				break;
-			case InputDirections.NegativeX: velocityMatchesDirection = _rb2d.velocity.x < 0;
+			case Directions2D.NegativeX: velocityMatchesDirection = _rb2d.velocity.x < 0;
 				break;
-			case InputDirections.PositiveX: velocityMatchesDirection = _rb2d.velocity.x > 0;
+			case Directions2D.PositiveX: velocityMatchesDirection = _rb2d.velocity.x > 0;
 				break;
-			case InputDirections.Stationary: velocityMatchesDirection = _rb2d.velocity.y == 0 && _rb2d.velocity.x == 0;
+			case Directions2D.Stationary: velocityMatchesDirection = _rb2d.velocity.y == 0 && _rb2d.velocity.x == 0;
 				break;
 		}
 		return velocityMatchesDirection;

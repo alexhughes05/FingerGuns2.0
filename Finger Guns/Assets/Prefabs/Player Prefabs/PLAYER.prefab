@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc5a42feae285448b5d6a1adf9a2187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPool: {fileID: 5967763035601554793}
+  shotPool: {fileID: 0}
   firePoint: {fileID: 2687203544608886738}
   fireRate: 0.4
   muzzleVelocity: 75

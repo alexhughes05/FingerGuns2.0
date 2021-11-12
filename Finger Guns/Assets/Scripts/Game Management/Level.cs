@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,6 +32,11 @@ public class Level : MonoBehaviour
     {
         int levelIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(levelIndex + 1);
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+
     }
 
     public void EnterShop()

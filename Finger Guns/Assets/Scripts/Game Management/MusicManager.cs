@@ -27,6 +27,8 @@ public class MusicManager : MonoBehaviour
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
         instance.start();
+        instance.getParameterByName("TutorialShift", out float test);
+        Debug.Log("The value of test is " + test);
     }
 
     public void GameStarted()

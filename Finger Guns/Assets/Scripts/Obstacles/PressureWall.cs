@@ -15,7 +15,7 @@ public class PressureWall : MonoBehaviour
     private Camera cam;
     private Transform blackGradient;
     private BoxCollider2D col;
-    private PlayerHealth playerHealth;
+    private Health playerHealth;
     private float offset;
     private float size;
     private Coroutine co;
@@ -27,7 +27,7 @@ public class PressureWall : MonoBehaviour
     {
         cam = Camera.main;
         col = GetComponent<BoxCollider2D>();
-        playerHealth = FindObjectOfType<PlayerHealth>();
+        playerHealth = FindObjectOfType<Health>();
     }
 
     // Start is called before the first frame update
