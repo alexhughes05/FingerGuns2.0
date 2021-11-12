@@ -5,11 +5,11 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
     //Components
-    private Health playerHealth;
+    private PlayerHealth playerHealth;
 
     private void Awake()
     {
-        playerHealth = FindObjectOfType<Health>();
+        playerHealth = FindObjectOfType<PlayerHealth>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

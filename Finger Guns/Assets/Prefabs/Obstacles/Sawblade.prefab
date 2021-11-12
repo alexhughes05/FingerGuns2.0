@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4155125744483935020}
   - component: {fileID: 9204660337506104990}
   - component: {fileID: -5284052287596010625}
+  - component: {fileID: -5877242489446320267}
   - component: {fileID: 8749347966007137599}
-  - component: {fileID: 7121356016365920536}
   m_Layer: 15
   m_Name: Sawblade
   m_TagString: Blade
@@ -98,7 +98,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -152,6 +152,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hasMaxLifetime: 1
   _timeUntilDestroyed: 5
+--- !u!114 &-5877242489446320267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601261908118081095}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c1b473b0eefc74380722025710328d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relativeToScreen: 0
+  paths: []
+  pathsPrefab:
+  - {fileID: 6511349331371463512, guid: 21dc768631d65c645a7b9cff71b6d5af, type: 3}
+  - {fileID: 4799639990497653289, guid: 6516e8a584e0ee34db2f34b9090728f1, type: 3}
+  - {fileID: 8209564550454882195, guid: f8ebafbe4849c1648a8ef3fad0136064, type: 3}
+  navigationSpeed: 10
+  executeOnStart: 0
 --- !u!114 &8749347966007137599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,15 +188,3 @@ MonoBehaviour:
   StartSpinningWhenEnabled: 1
   spinInDirectionOfMovement: 1
   rotationDirection: 0
---- !u!114 &7121356016365920536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6601261908118081095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ab83d6fe36a7343997519638e690c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

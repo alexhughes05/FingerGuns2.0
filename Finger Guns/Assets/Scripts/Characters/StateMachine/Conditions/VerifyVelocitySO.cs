@@ -13,7 +13,7 @@ public class VerifyVelocitySO : StateConditionSO
 	private float velocityToVerify;
 	[Header("On the Axis:")]
 	[SerializeField]
-	private VelocityAxis axis;
+	private Axis axis;
 
 	protected override Condition CreateCondition() => new VerifyVelocity(comparison, velocityToVerify, axis);
 }
@@ -22,9 +22,9 @@ public class VerifyVelocity : Condition
 {
 	private readonly Comparison _comparison;
 	private readonly float _velocityToVerify;
-	private readonly VelocityAxis _axis;
+	private readonly Axis _axis;
 	private Rigidbody2D _rb2d;
-	public VerifyVelocity(Comparison comparison, float velocityToVerify, VelocityAxis axis)
+	public VerifyVelocity(Comparison comparison, float velocityToVerify, Axis axis)
     {
 		_comparison = comparison;
 		_velocityToVerify = velocityToVerify;
@@ -59,13 +59,13 @@ public class VerifyVelocity : Condition
 			case Comparison.EqualTo:
 				switch (_axis)
                 {
-					case VelocityAxis.X:
+					case Axis.X:
 						expressionResult = _rb2d.velocity.x == _velocityToVerify;
 						break;
-					case VelocityAxis.Y:
+					case Axis.Y:
 						expressionResult = _rb2d.velocity.y == _velocityToVerify;
 						break;
-					case VelocityAxis.XY:
+					case Axis.XY:
 						expressionResult = _rb2d.velocity.x == _velocityToVerify && _rb2d.velocity.y == _velocityToVerify;
 						break;
 				}
@@ -73,13 +73,13 @@ public class VerifyVelocity : Condition
 			case Comparison.LessThan:
 				switch (_axis)
 				{
-					case VelocityAxis.X:
+					case Axis.X:
 						expressionResult = _rb2d.velocity.x < _velocityToVerify;
 						break;
-					case VelocityAxis.Y:
+					case Axis.Y:
 						expressionResult = _rb2d.velocity.y < _velocityToVerify;
 						break;
-					case VelocityAxis.XY:
+					case Axis.XY:
 						expressionResult = _rb2d.velocity.x < _velocityToVerify && _rb2d.velocity.y < _velocityToVerify;
 						break;
 				}
@@ -87,13 +87,13 @@ public class VerifyVelocity : Condition
 			case Comparison.GreaterThan:
 				switch (_axis)
 				{
-					case VelocityAxis.X:
+					case Axis.X:
 						expressionResult = _rb2d.velocity.x > _velocityToVerify;
 						break;
-					case VelocityAxis.Y:
+					case Axis.Y:
 						expressionResult = _rb2d.velocity.y > _velocityToVerify;
 						break;
-					case VelocityAxis.XY:
+					case Axis.XY:
 						expressionResult = _rb2d.velocity.x > _velocityToVerify && _rb2d.velocity.y > _velocityToVerify;
 						break;
 				}

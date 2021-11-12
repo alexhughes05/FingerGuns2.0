@@ -51,7 +51,7 @@ namespace FingerGuns.StateMachine
 			OnStateExit(_actions);
 		}
 
-		public bool TryGetTransition(out State state) //Is the state able to transition
+		public bool TryGetTransition(out State state) //Is the state anble to transition
 		{
 			state = null;
 

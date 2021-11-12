@@ -22,7 +22,7 @@ public class PlayerAim : MonoBehaviour
 
     //Components and References
     private DirectionBehaviour _directionBehaviour;
-    private Health _health;
+    //private InputReader fgmInput;
 
     //Private fields
     private Vector3 mousePosition;
@@ -35,14 +35,7 @@ public class PlayerAim : MonoBehaviour
 
     private void Awake()
     {
-        TryGetComponent(out _directionBehaviour);
-        if (_directionBehaviour == null)
-            Debug.LogError("The DirectionBehaviour component could not be found on the game object " + gameObject.name);
-
-        TryGetComponent(out _health);
-        if (_health == null)
-            Debug.LogError("The Health component could not be found on the game object " + gameObject.name);
-
+        _directionBehaviour = GetComponent<DirectionBehaviour>();
         cam = Camera.main;
     }
 
@@ -57,33 +50,30 @@ public class PlayerAim : MonoBehaviour
 
     public void Aim(Vector2 aimValue)
     {
-        if (_health.CurrentHealth > 0)
+        //Get Mouse World Position
+        mousePosition = cam.ScreenToWorldPoint(aimValue);
+        AimDirection = (mousePosition - playerHandRotator.transform.position).normalized;
+
+        //Aim Hand
+        float angle;
+        if (_directionBehaviour.FacingDirection == XDirections.Right)
         {
-            //Get Mouse World Position
-            mousePosition = cam.ScreenToWorldPoint(aimValue);
-            AimDirection = (mousePosition - playerHandRotator.transform.position).normalized;
-
-            //Aim Hand
-            float angle;
-            if (_directionBehaviour.FacingDirection == XDirections.Right)
-            {
-                angle = Mathf.Atan2(AimDirection.y, AimDirection.x) * Mathf.Rad2Deg;
-            }
-            else
-            {
-                angle = Mathf.Atan2(-AimDirection.y, -AimDirection.x) * Mathf.Rad2Deg;
-            }
-
-            playerHandRotator.eulerAngles = new Vector3(0, 0, angle);
-
-            //Move Camera Target
-            cameraTarget.localPosition = new Vector3(Mathf.Lerp(cameraTarget.localPosition.x,
-                AimDirection.x * lookAheadAmount, lookAheadSpeed * Time.deltaTime),
-                cameraTarget.localPosition.y, cameraTarget.localPosition.z);
-
-            //Player Flip Condition
-            if (angle > 90 || angle < -90)
-                _directionBehaviour.FlipXFacingDirection();
+            angle = Mathf.Atan2(AimDirection.y, AimDirection.x) * Mathf.Rad2Deg;
         }
+        else
+        {
+            angle = Mathf.Atan2(-AimDirection.y, -AimDirection.x) * Mathf.Rad2Deg;
+        }
+
+        playerHandRotator.eulerAngles = new Vector3(0, 0, angle);
+
+        //Move Camera Target
+        cameraTarget.localPosition = new Vector3(Mathf.Lerp(cameraTarget.localPosition.x,
+            AimDirection.x * lookAheadAmount, lookAheadSpeed * Time.deltaTime),
+            cameraTarget.localPosition.y, cameraTarget.localPosition.z);
+
+        //Player Flip Condition
+        if (angle > 90 || angle < -90)
+            _directionBehaviour.FlipXFacingDirection();
     }
 }

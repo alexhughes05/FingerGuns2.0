@@ -34,7 +34,7 @@ public class ObstacleSpawnee : MonoBehaviour, IPoolable
     {
         if (_hasMaxLifetime)
         {
-            if (AssociatedPool != null && Time.time >= _endOfLifeTime)
+            if (Time.time >= _endOfLifeTime)
                 AssociatedPool.ReturnToPool(gameObject);
         }
     }

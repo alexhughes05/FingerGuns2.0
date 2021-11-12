@@ -9,7 +9,7 @@ public class VolcanicRock : MonoBehaviour
     [SerializeField] float maxRotationSpeed;
 
     //Components
-    private Health health;
+    private PlayerHealth health;
     private Rigidbody2D rb2d;
     private bool firstTime = true;
     private bool startRotation;
@@ -18,7 +18,7 @@ public class VolcanicRock : MonoBehaviour
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        health = FindObjectOfType<Health>();
+        health = FindObjectOfType<PlayerHealth>();
     }
 
     private void Update()

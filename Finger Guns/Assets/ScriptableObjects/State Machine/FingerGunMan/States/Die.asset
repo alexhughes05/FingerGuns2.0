@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35432205b9a6a374bbbfe6b7cac92179, type: 3}
   m_Name: Die
   m_EditorClassIdentifier: 
-  _actions:
-  - {fileID: 11400000, guid: 4cbb0ffc176d0814ab7a8007f311eae6, type: 2}
-  - {fileID: 11400000, guid: 84a96f813022ed2468114b50ac526409, type: 2}
+  _actions: []
