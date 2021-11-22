@@ -787,10 +787,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1574.0,
-            "y": -136.00003051757813,
-            "width": 207.99998474121095,
-            "height": 103.99999237060547
+            "x": -1570.9998779296875,
+            "y": -136.0,
+            "width": 208.0,
+            "height": 104.0
         }
     },
     "m_Slots": [
@@ -815,8 +815,8 @@
         },
         {
             "x": 1.0,
-            "y": 1.0,
-            "z": 1.0,
+            "y": 0.046665094792842868,
+            "z": 0.020288562402129175,
             "w": 1.0
         }
     ],
@@ -1394,9 +1394,9 @@
     "m_Guid": {
         "m_GuidSerialized": "286c3e71-2593-4202-adc0-5848f582f3c6"
     },
-    "m_Name": "DamagedToggle",
+    "m_Name": "RedToggle",
     "m_DefaultReferenceName": "Boolean_e8fa001a0e13471385c24d2e796875f8",
-    "m_OverrideReferenceName": "DamagedToggle",
+    "m_OverrideReferenceName": "RedToggle",
     "m_GeneratePropertyBlock": false,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
