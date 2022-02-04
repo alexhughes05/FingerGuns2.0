@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MoveBehaviour))]
 public class FgmInputHandler : MonoBehaviour
 {
     //Inspector
@@ -20,6 +17,7 @@ public class FgmInputHandler : MonoBehaviour
     private bool _endOfLandingCriticalSection;
     private bool _endOfBackflipCriticalSection;
     private bool _endOfSomersaultCriticalSection;
+    private bool _endOfStandUpCriticalSection;
 
     private XDirections _moveDirection;
 
@@ -50,6 +48,12 @@ public class FgmInputHandler : MonoBehaviour
             Debug.LogError("The Shoot component cannot be found.");
     }
 
+    private void Update()
+    {
+        Debug.Log("Backflip Input is " + BackflipInput);
+        Debug.Log("Somersault Input is " + SomersaultInput);
+    }
+
 
     private void OnEnable()
     {
@@ -78,11 +82,6 @@ public class FgmInputHandler : MonoBehaviour
         _inputReader.FlipCanceledEvent -= OnFlipCanceled;
     }
 
-    private void Update()
-    {
-        //OnJumpInitiated(Time.time);
-        //Debug.Log("LANDING IS CURRENTLY " + IsLandingAnimFinished());
-    }
     private void OnShoot(Vector3 mousePos)
     {
         _shoot.Attack(mousePos);
@@ -148,14 +147,16 @@ public class FgmInputHandler : MonoBehaviour
     }
 
     #region Critical Section methods
-    public bool IsLandingCriticalSectionDone() => _endOfLandingCriticalSection;
-    public bool IsJumpCriticalSectionDone() => _endOfJumpCriticalSection;
+    public bool IsLandingAnimDone() => _endOfLandingCriticalSection;
+    public bool IsJumpAnimDone() => _endOfJumpCriticalSection;
     public bool IsBackflipAnimDone() => _endOfBackflipCriticalSection;
     public bool IsSomersaultAnimDone() => _endOfSomersaultCriticalSection;
-    public void SetEndOfJumpCriticalSection(int value) => _endOfJumpCriticalSection = Convert.ToBoolean(value);
-    public void SetEndOfLandingCriticalSection(int value) => _endOfLandingCriticalSection = Convert.ToBoolean(value);
+    public bool IsStandUpAnimDone() => _endOfStandUpCriticalSection;
+    public void SetEndOfJumpAnim(int value) => _endOfJumpCriticalSection = Convert.ToBoolean(value);
+    public void SetEndOfLandingAnim(int value) => _endOfLandingCriticalSection = Convert.ToBoolean(value);
     public void SetEndOfBackflipAnim(int value) => _endOfBackflipCriticalSection = Convert.ToBoolean(value);
     public void SetEndOfSomersaultAnim(int value) => _endOfSomersaultCriticalSection = Convert.ToBoolean(value);
+    public void SetEndOfStandUpAnim(int value) => _endOfStandUpCriticalSection = Convert.ToBoolean(value);
     #endregion
 }
 

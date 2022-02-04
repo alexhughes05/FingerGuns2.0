@@ -15,7 +15,7 @@ public class PressureWall : MonoBehaviour
     private Camera cam;
     private Transform blackGradient;
     private BoxCollider2D col;
-    private PlayerHealth playerHealth;
+    private Damageable playerHealth;
     private float offset;
     private float size;
     private Coroutine co;
@@ -27,7 +27,7 @@ public class PressureWall : MonoBehaviour
     {
         cam = Camera.main;
         col = GetComponent<BoxCollider2D>();
-        playerHealth = FindObjectOfType<PlayerHealth>();
+        playerHealth = FindObjectOfType<Damageable>();
     }
 
     // Start is called before the first frame update
@@ -83,11 +83,11 @@ public class PressureWall : MonoBehaviour
         {
             yield return new WaitForSeconds(timeBtwDamageTicks); //How often the player should be damaged
             playerHealth.TakeDamage(1);
-            if (playerHealth.CurrentHealth <= 0)
-            {
-                playerDead = true;
-                yield break;
-            }
+            //if (playerHealth.CurrentHealth <= 0)
+            //{
+               // playerDead = true;
+                //yield break;
+            //}
         }
     }
     //Properties

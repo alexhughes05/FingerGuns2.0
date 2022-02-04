@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09c41557858f784cb5a8bb0ec4f83d1, type: 3}
+  m_Name: IsFacingRight
+  m_EditorClassIdentifier: 
+  description: Returns true if the currect facing direction, which is deteremined 
+    by the DirectionBehaviour component, matches the facing direction you are checking
+    for in the inspector (In this case it's right). The starting direction of the
+    player is defaulted by the DirectionBehaviour component and every time the gameobjects
+    direction changes, the current direction is updated.
+  facingDirection: 1

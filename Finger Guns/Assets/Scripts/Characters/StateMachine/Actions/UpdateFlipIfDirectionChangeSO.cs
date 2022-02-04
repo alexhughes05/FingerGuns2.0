@@ -47,6 +47,11 @@ public class UpdateFlipIfDirectionChange : StateAction
 				_fgmInputHandler.BackflipInput = true;
 				_fgmInputHandler.SomersaultInput = false;
 			}
+			else
+            {
+				_fgmInputHandler.BackflipInput = false;
+				_fgmInputHandler.SomersaultInput = false;
+			}
 		}
 		else if (_fgmInputHandler.BackflipInput)
         {
@@ -54,6 +59,11 @@ public class UpdateFlipIfDirectionChange : StateAction
             {
 				_fgmInputHandler.BackflipInput = false;
 				_fgmInputHandler.SomersaultInput = true;
+			}
+			else
+            {
+				_fgmInputHandler.BackflipInput = false;
+				_fgmInputHandler.SomersaultInput = false;
 			}
 		}
 	}

@@ -20,17 +20,17 @@ public class IsLandingAnimFinished : Condition
 	
 	protected override bool Statement()
 	{
-		return _fingerGunMan.IsLandingCriticalSectionDone();
+		return _fingerGunMan.IsLandingAnimDone();
 	}
 	
 	public override void OnStateEnter() 
 	{
-		_fingerGunMan.SetEndOfLandingCriticalSection(0);
+		_fingerGunMan.SetEndOfLandingAnim(0);
 	}
 
 	public override void OnStateExit() 
 	{
-		_fingerGunMan.SetEndOfLandingCriticalSection(0);
+		_fingerGunMan.SetEndOfLandingAnim(0);
 	}
 
 }

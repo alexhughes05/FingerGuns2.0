@@ -6,18 +6,31 @@ public class DealDamage : MonoBehaviour
     [SerializeField]
     private int damage;
 
+    //Private Fields
+    private bool alreadyDamaged;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var root = collision.gameObject.transform.root;
-        IDamageable damageable = root.GetComponentInChildren<IDamageable>();
-
-        if (damageable != null)
+        if (alreadyDamaged == false) //Avoids bug where entity takes damage twice in the same frame.
         {
-            damageable.TakeDamage(damage);
+            var root = collision.gameObject.transform.root;
+            Damageable damageable = root.GetComponentInChildren<Damageable>();
 
-            IPoolable poolable = gameObject.GetComponent<IPoolable>();
-            if (poolable != null) poolable.AssociatedPool.ReturnToPool(gameObject);
+            if (damageable != null)
+            {
+                damageable.TakeDamage(damage);
+                alreadyDamaged = true;
+
+                IPoolable poolable = gameObject.GetComponent<IPoolable>();
+                if (poolable != null && poolable.AssociatedPool != null)
+                    poolable.AssociatedPool.ReturnToPool(gameObject);
+            }
         }
+    }
+
+    private void LateUpdate()
+    {
+        alreadyDamaged = false;
     }
 }
 

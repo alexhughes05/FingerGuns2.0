@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : MonoBehaviour, IDamageable
+public class EnemyHealth: MonoBehaviour
 {
     #region Variables
 
     //Inspector
     [Header("Enemy")]
-    [SerializeField] 
+    [SerializeField]
     private int maxHealth;
     private int enemyPointValue = 100;
 
@@ -59,7 +59,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     //public void AddPoints()
     //{
-    //    if(!isDead)
+    //    if (!isDead)
     //        gameSession.AddToScore(enemyPointValue);
     //}
 

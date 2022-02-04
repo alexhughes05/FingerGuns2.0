@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 2687203544924583491}
   - component: {fileID: 2687203544804970209}
   - component: {fileID: 1054844822}
+  - component: {fileID: 456365381685773158}
   - component: {fileID: 5668604511607926058}
   - component: {fileID: 5668604511607926059}
   - component: {fileID: 2687203544924583489}
@@ -717,6 +718,24 @@ MonoBehaviour:
     appendConditionsInfo: 1
     appendActionsInfo: 1
     currentState: 
+--- !u!114 &456365381685773158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668604511607926055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eeda163c70b3cb4ebb88ba92f608fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitionTableSO: {fileID: 11400000, guid: bdf352c3aecce6a47a36971a582f6bfb, type: 2}
+  _debugger:
+    debugTransitions: 0
+    appendConditionsInfo: 1
+    appendActionsInfo: 1
+    currentState: 
 --- !u!114 &5668604511607926058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,8 +775,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf792371dabac44bb23b6be35ae8db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
-  playerDeathEventSO: {fileID: 11400000, guid: 15479ec7b0dd2f44cb994d5806b0591f, type: 2}
+  _healthConfigSO: {fileID: 11400000, guid: 7671aca186d65fd429f642660cd18ce1, type: 2}
+  _currentHealthSO: {fileID: 11400000, guid: 707e566e4f784844eb48b72e0495bfc0, type: 2}
+  _updateHealthUI: {fileID: 11400000, guid: 5b260fae9fa88604db606da28d7687ea, type: 2}
+  _deathEvent: {fileID: 11400000, guid: 5568a14d834b46d44967e0133a281e64, type: 2}
 --- !u!114 &2687203544924583493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,7 +1098,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5967763035601554792}
-  - component: {fileID: 5967763035601554793}
   m_Layer: 10
   m_Name: Player Shot Pool
   m_TagString: Untagged
@@ -1099,19 +1119,6 @@ Transform:
   m_Father: {fileID: 5967763036530571554}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5967763035601554793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5967763035601554794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75078d9a6b88beb4bbf651c9ce7d0ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 8415371647407671812, guid: 4ae755b6f0e7ea44684f1486e0522fa3, type: 3}
 --- !u!1 &5967763036530571555
 GameObject:
   m_ObjectHideFlags: 0

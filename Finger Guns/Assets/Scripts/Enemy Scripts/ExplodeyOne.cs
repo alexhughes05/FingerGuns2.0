@@ -69,7 +69,7 @@ public class ExplodeyOne : MonoBehaviour
                 GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
                 explosion.Play();
                 if (inExplosionRadius)
-                    playerScript.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+                    playerScript.gameObject.GetComponent<Damageable>().TakeDamage(1);
                 Destroy(gameObject, 0.7f);
             }
         }

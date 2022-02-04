@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3417659515ef694db0b1548b47f8033, type: 3}
+  m_Name: Set_Knockback_Vector_Y_Zero_When_Grounded
+  m_EditorClassIdentifier: 
+  description: Sets the y of the knockback vector from the Knockbackable component
+    to 0 when the gameobject is grounded. The GroundChecker component is needed to
+    determine if the gameobject is grounded.
+  whenToRun: 0
+  knockbackComponent: 1
+  desiredValue: 0
+  applyWhenGrounded: 1

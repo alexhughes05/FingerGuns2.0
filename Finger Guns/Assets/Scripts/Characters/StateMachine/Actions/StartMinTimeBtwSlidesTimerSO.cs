@@ -11,10 +11,12 @@ public class StartMinTimeBtwSlidesTimerSO : StateActionSO
 public class StartMinTimeBtwSlidesTimer : StateAction
 {
 	private FgmSlideTimers _fgmSlideTimers;
+	private FgmInputHandler _fgmInputHandler;
 
 	public override void Awake(StateMachine stateMachine)
 	{
 		_fgmSlideTimers = stateMachine.GetComponent<FgmSlideTimers>();
+		_fgmInputHandler = stateMachine.GetComponent<FgmInputHandler>();
 	}
 	public override void OnUpdate() { }
 
@@ -23,5 +25,6 @@ public class StartMinTimeBtwSlidesTimer : StateAction
 	{
 		_fgmSlideTimers.TimeWhenSlideEnds = 0f;
 		_fgmSlideTimers.StartTimeBtwSlidesTimer();
+		_fgmInputHandler.SlideInput = false;
 	}
 }
