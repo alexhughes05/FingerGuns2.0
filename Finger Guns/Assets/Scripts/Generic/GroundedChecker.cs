@@ -13,7 +13,7 @@ public class GroundedChecker : MonoBehaviour
     //References
     private Collider2D _col;
     private Rigidbody2D _rb2d;
-    private PlayerPhysicsMatSwapper _playerPhysicsMatSwapper;
+    private PhysicsMatSwapper _playerPhysicsMatSwapper;
 
     //Fields
     private RaycastHit2D raycastHit;
@@ -28,7 +28,7 @@ public class GroundedChecker : MonoBehaviour
     {
         TryGetComponent<Collider2D>(out _col);
         TryGetComponent<Rigidbody2D>(out _rb2d);
-        TryGetComponent<PlayerPhysicsMatSwapper>(out _playerPhysicsMatSwapper);
+        TryGetComponent<PhysicsMatSwapper>(out _playerPhysicsMatSwapper);
     }
 
     protected virtual void Update() => ExecuteGroundedCheck();

@@ -25,7 +25,7 @@ public class JumpInputCondition : Condition
 	
 	public override void OnStateEnter() 
 	{
-		_fingerGunMan.SetEndOfJumpCriticalSection(0);
+		_fingerGunMan.SetEndOfJumpAnim(0);
 	}
 
 	

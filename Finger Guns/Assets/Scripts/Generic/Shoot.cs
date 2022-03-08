@@ -56,7 +56,6 @@ public class Shoot : MonoBehaviour, IAttack
             instance.release();
         }
     }
-    //Setting Animation Parameter
 
     //Interface implementations
     public void Attack(Vector3 target)

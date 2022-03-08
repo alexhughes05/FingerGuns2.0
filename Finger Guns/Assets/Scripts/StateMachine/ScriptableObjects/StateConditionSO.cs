@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace FingerGuns.StateMachine.ScriptableObjects
 {
-	public abstract class StateConditionSO : ScriptableObject
+	public abstract class StateConditionSO : DescriptionSMActionBaseSO
 	{
 		/// <summary>
 		/// Will create a new custom <see cref="Condition"/> or use an existing one inside <paramref name="createdInstances"/>.

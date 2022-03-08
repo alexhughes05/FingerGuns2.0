@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555732c502e2ba14593263c6cbdbd8d5, type: 3}
   m_Name: Limit_Fall_Speed
   m_EditorClassIdentifier: 
+  description: 
   maxFallSpeed: 30

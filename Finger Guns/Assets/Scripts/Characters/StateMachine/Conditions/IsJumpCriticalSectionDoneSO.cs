@@ -20,15 +20,15 @@ public class IsJumpAnimFinished : Condition
 	
 	protected override bool Statement()
 	{
-		return _fingerGunMan.IsJumpCriticalSectionDone();
+		return _fingerGunMan.IsJumpAnimDone();
 	}	
 	public override void OnStateEnter() 
 	{
-		_fingerGunMan.SetEndOfJumpCriticalSection(0);
+		_fingerGunMan.SetEndOfJumpAnim(0);
 	}
 	
 	public override void OnStateExit() 
 	{
-		_fingerGunMan.SetEndOfJumpCriticalSection(0);
+		_fingerGunMan.SetEndOfJumpAnim(0);
 	}
 }

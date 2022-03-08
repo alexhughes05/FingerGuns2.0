@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c239703c38e6be44a04d57ab0cf8019, type: 3}
+  m_Name: IsInvulnerable
+  m_EditorClassIdentifier: 
+  description: Checks if the damageable gameObject is invulnerable. It does this
+    by checking the Invulnerable property in the Damageable component on the gameobject.

@@ -19,7 +19,7 @@ public class LandingBehaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<FgmInputHandler>().SetEndOfLandingCriticalSection(1);
+        animator.gameObject.GetComponent<FgmInputHandler>().SetEndOfLandingAnim(1);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

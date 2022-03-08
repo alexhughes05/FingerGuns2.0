@@ -42,17 +42,17 @@ public class SetVelocity : StateAction
 	
 	public override void OnUpdate()
 	{
-		SetVelocityOfSpecifiedAxis(SpecificMoment.OnUpdate, _applyToAxis);
+		SetVelocityOfSpecifiedAxis(Moment.OnUpdate, _applyToAxis);
 	}
 	
 	public override void OnStateEnter()
 	{
-		SetVelocityOfSpecifiedAxis(SpecificMoment.OnStateEnter, _applyToAxis);
+		SetVelocityOfSpecifiedAxis(Moment.OnStateEnter, _applyToAxis);
 	}
 	
 	public override void OnStateExit()
 	{
-		SetVelocityOfSpecifiedAxis(SpecificMoment.OnStateExit, _applyToAxis);
+		SetVelocityOfSpecifiedAxis(Moment.OnStateExit, _applyToAxis);
 	}
 
 	private void SetVelocityOfSpecifiedAxis(Moment specifiedMoment, Axis specifiedAxis)

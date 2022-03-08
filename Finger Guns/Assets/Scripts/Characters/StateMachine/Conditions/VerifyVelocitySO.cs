@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using FingerGuns.StateMachine;
 using FingerGuns.StateMachine.ScriptableObjects;
-using Moment = FingerGuns.StateMachine.StateAction.SpecificMoment;
 
 [CreateAssetMenu(fileName = "VerifyVelocity", menuName = "State Machines/Conditions/Verify Velocity")]
 public class VerifyVelocitySO : StateConditionSO
