@@ -16,6 +16,6 @@ MonoBehaviour:
     AlphaFlickerShader is toggled. This is achieved by accessing the MaterialModifier
     component.
   nameId: DamagedToggle
-  toggleDuration: 0.15
-  timeBtwToggles: 0.1
-  numOfToggles: 4
+  toggleDuration: 0.08
+  timeBtwToggles: 0.06
+  numOfToggles: 8
