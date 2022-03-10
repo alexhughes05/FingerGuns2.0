@@ -45,7 +45,6 @@ public class ObstacleSpawneePool_Editor : Editor
 
     public override void OnInspectorGUI()
     {
-        Debug.Log("minScaleMultiplier is " + minScaleMultiplier);
         DrawDefaultInspector();
 
         EditorGUILayout.Space();
