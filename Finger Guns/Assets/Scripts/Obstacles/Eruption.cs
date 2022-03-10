@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
-using System.Threading;
 
 public class Eruption : MonoBehaviour
 {

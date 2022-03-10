@@ -48,13 +48,6 @@ public class FgmInputHandler : MonoBehaviour
             Debug.LogError("The Shoot component cannot be found.");
     }
 
-    private void Update()
-    {
-        Debug.Log("Backflip Input is " + BackflipInput);
-        Debug.Log("Somersault Input is " + SomersaultInput);
-    }
-
-
     private void OnEnable()
     {
         _inputReader.StartMovingEvent += OnStartMovingInitiated;
