@@ -48,6 +48,11 @@ public class ObstacleSpawnee : MonoBehaviour, IPoolable
     {
         transform.position = spawnPos;
     }
+    public void SetScaleSize(float sizeMultiplier)
+    {
+        transform.localScale = Vector3.one * 100f;
+        transform.localScale *= sizeMultiplier;
+    }
     public void SetVelocity(Vector3 initialVelocity)
     {
         _rb2d.velocity = initialVelocity;

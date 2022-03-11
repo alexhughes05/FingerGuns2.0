@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
-using System.Threading;
 
 public class Eruption : MonoBehaviour
 {
@@ -45,39 +43,31 @@ public class Eruption : MonoBehaviour
 
     private IEnumerator StartShaking()
     {
-        Debug.Log("start of start shaking.");
         shaker = CameraShaker.Instance.StartShake(magnitudeValue, roughnessValue, fadeInTime);
         yield return new WaitForSeconds(rumbleTimeBeforeSmoke);
         smokeAndRocksEffect.StartSmokeEffect();
         StartCoroutine(StartRockEffect());
-        Debug.Log("end of startshaking.");
     }
 
     private IEnumerator StartRockEffect()
     {
-        Debug.Log("start of startrockeffect.");
         yield return new WaitForSeconds(smokeAndRocksEffect.RocksDelayAfterSmoke);
         smokeAndRocksEffect.StartRocksEffect();
         StartCoroutine(StartRainingDebris());
-        Debug.Log("end of startrockeffect.");
     }
 
     private IEnumerator StartRainingDebris()
     {
-        Debug.Log("start of startRainingDebris");
         yield return new WaitForSeconds(DelayToStartRainingDebris);
         debris.StartRainingDebris();
         StartCoroutine(StopShaking());
-        Debug.Log("end of startRainingDebris");
     }
 
     private IEnumerator StopShaking()
     {
-        Debug.Log("start of stopShaking.");
         yield return new WaitForSeconds(smokeAndRocksEffect.RocksDuration - DelayToStartRainingDebris);
         shaker.StartFadeOut(fadeOutTime);
         shaker.UpdateShake();
-        Debug.Log("end of stopShaking.");
     }
 
     //Properties

@@ -1,0 +1,504 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2148207472605380648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207472605380655}
+  - component: {fileID: 2148207472605380654}
+  m_Layer: 0
+  m_Name: Obstacle Spawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207472605380655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472605380648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2148207473836691256}
+  m_Father: {fileID: 698581138959498557}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207472605380654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472605380648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e50fced0a0524dab6034c66f93515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePools:
+  - {fileID: 2148207473836691263}
+  minTimeBtwSpawnedObjects: 0
+  executeOnStartup: 0
+--- !u!1 &2148207472613057990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207472613057989}
+  - component: {fileID: 2148207472613057988}
+  m_Layer: 0
+  m_Name: Obstacle Spawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207472613057989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472613057990}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2148207472958051497}
+  m_Father: {fileID: 698581138959498557}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207472613057988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472613057990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e50fced0a0524dab6034c66f93515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePools:
+  - {fileID: 2148207472958051496}
+  minTimeBtwSpawnedObjects: 0
+  executeOnStartup: 0
+--- !u!1 &2148207472759455845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207472759455844}
+  - component: {fileID: 2148207472759455851}
+  m_Layer: 0
+  m_Name: Volcano Rock 01 Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207472759455844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472759455845}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2148207473731212237}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207472759455851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472759455845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1e68f190485ba40b531577dd1caf48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3769739913032361408, guid: 00663dd220ede0742aaf632143d14687, type: 3}
+  spawnRateValueType: 1
+  spawnRateInSeconds: 2
+  _minSpawnRateInSeconds: 0.3
+  _maxSpawnRateInSeconds: 0.7
+  _spawnType: 0
+  _possibleTransformSpawnPoints:
+  - initialVelocity: {x: 10, y: 0}
+    spawnPointValueType: 0
+    transformSpawnPoint: {fileID: 0}
+    topLeftTransform: {fileID: 0}
+    bottomRightTransform: {fileID: 0}
+  _possibleRelativeSpawnPoints:
+  - initialVelocity: {x: 0, y: -15}
+    spawnPointValueType: 1
+    screenPosition: {x: 0, y: 28.2}
+    minScreenWidth: 0
+    maxScreenWidth: 100
+    minScreenHeight: 100
+    maxScreenHeight: 100
+    screenWidthPosOffset: -5
+    screenHeightPosOffset: 0
+    minScreenWidthOffset: 0
+    maxScreenWidthOffset: 0
+    minScreenHeightOffset: 5
+    maxScreenHeightOffset: 0
+--- !u!1 &2148207472958051498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207472958051497}
+  - component: {fileID: 2148207472958051496}
+  m_Layer: 0
+  m_Name: Volcano Rock 03 Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207472958051497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472958051498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2148207472613057989}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207472958051496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472958051498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1e68f190485ba40b531577dd1caf48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1813584301085172686, guid: 12c7865ee4a6a0c4ea525815fd74900c, type: 3}
+  spawnRateValueType: 1
+  spawnRateInSeconds: 2
+  _minSpawnRateInSeconds: 0.2
+  _maxSpawnRateInSeconds: 0.6
+  _spawnType: 0
+  _possibleTransformSpawnPoints:
+  - initialVelocity: {x: 10, y: 0}
+    spawnPointValueType: 0
+    transformSpawnPoint: {fileID: 0}
+    topLeftTransform: {fileID: 0}
+    bottomRightTransform: {fileID: 0}
+  _possibleRelativeSpawnPoints:
+  - initialVelocity: {x: 0, y: -21}
+    spawnPointValueType: 1
+    screenPosition: {x: 0, y: 28.2}
+    minScreenWidth: 0
+    maxScreenWidth: 100
+    minScreenHeight: 100
+    maxScreenHeight: 100
+    screenWidthPosOffset: -5
+    screenHeightPosOffset: 0
+    minScreenWidthOffset: 0
+    maxScreenWidthOffset: 0
+    minScreenHeightOffset: 5
+    maxScreenHeightOffset: 0
+--- !u!1 &2148207473180154049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207473180154048}
+  - component: {fileID: 2148207473180154055}
+  m_Layer: 0
+  m_Name: Obstacle Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207473180154048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473180154049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2148207473515776591}
+  m_Father: {fileID: 698581138959498557}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207473180154055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473180154049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e50fced0a0524dab6034c66f93515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePools:
+  - {fileID: 2148207473515776590}
+  minTimeBtwSpawnedObjects: 0
+  executeOnStartup: 0
+--- !u!1 &2148207473515776584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207473515776591}
+  - component: {fileID: 2148207473515776590}
+  m_Layer: 0
+  m_Name: Volcano Rock 02 Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207473515776591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473515776584}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2148207473180154048}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207473515776590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473515776584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1e68f190485ba40b531577dd1caf48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2817277289047744509, guid: 75c8fd2f9c47a9f43b312621ac9917db, type: 3}
+  spawnRateValueType: 1
+  spawnRateInSeconds: 2
+  _minSpawnRateInSeconds: 0.5
+  _maxSpawnRateInSeconds: 1
+  _spawnType: 0
+  _possibleTransformSpawnPoints:
+  - initialVelocity: {x: 10, y: 0}
+    spawnPointValueType: 0
+    transformSpawnPoint: {fileID: 0}
+    topLeftTransform: {fileID: 0}
+    bottomRightTransform: {fileID: 0}
+  _possibleRelativeSpawnPoints:
+  - initialVelocity: {x: 0, y: -18}
+    spawnPointValueType: 1
+    screenPosition: {x: 0, y: 28.2}
+    minScreenWidth: 0
+    maxScreenWidth: 100
+    minScreenHeight: 100
+    maxScreenHeight: 100
+    screenWidthPosOffset: -5
+    screenHeightPosOffset: 0
+    minScreenWidthOffset: 0
+    maxScreenWidthOffset: 0
+    minScreenHeightOffset: 5
+    maxScreenHeightOffset: 0
+--- !u!1 &2148207473731212238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207473731212237}
+  - component: {fileID: 2148207473731212236}
+  m_Layer: 0
+  m_Name: Obstacle Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207473731212237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473731212238}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2148207472759455844}
+  m_Father: {fileID: 698581138959498557}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207473731212236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473731212238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996e50fced0a0524dab6034c66f93515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePools:
+  - {fileID: 2148207472759455851}
+  minTimeBtwSpawnedObjects: 0
+  executeOnStartup: 0
+--- !u!1 &2148207473836691257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2148207473836691256}
+  - component: {fileID: 2148207473836691263}
+  m_Layer: 0
+  m_Name: Volcano Rock 04 Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2148207473836691256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473836691257}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2148207472605380655}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2148207473836691263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207473836691257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1e68f190485ba40b531577dd1caf48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4856517158399783478, guid: dbe377feda3781e4a95afcb30d6a3fb6, type: 3}
+  spawnRateValueType: 1
+  spawnRateInSeconds: 2
+  _minSpawnRateInSeconds: 0.4
+  _maxSpawnRateInSeconds: 0.8
+  _spawnType: 0
+  _possibleTransformSpawnPoints:
+  - initialVelocity: {x: 10, y: 0}
+    spawnPointValueType: 0
+    transformSpawnPoint: {fileID: 0}
+    topLeftTransform: {fileID: 0}
+    bottomRightTransform: {fileID: 0}
+  _possibleRelativeSpawnPoints:
+  - initialVelocity: {x: 0, y: -25}
+    spawnPointValueType: 1
+    screenPosition: {x: 0, y: 28.2}
+    minScreenWidth: 0
+    maxScreenWidth: 100
+    minScreenHeight: 100
+    maxScreenHeight: 100
+    screenWidthPosOffset: -5
+    screenHeightPosOffset: 0
+    minScreenWidthOffset: 0
+    maxScreenWidthOffset: 0
+    minScreenHeightOffset: 5
+    maxScreenHeightOffset: 0
+--- !u!1 &8355235781481371696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698581138959498557}
+  m_Layer: 0
+  m_Name: Volcano Rock Spawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698581138959498557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8355235781481371696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 85.20334, y: 42.31502, z: -7.803691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2148207473731212237}
+  - {fileID: 2148207473180154048}
+  - {fileID: 2148207472613057989}
+  - {fileID: 2148207472605380655}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

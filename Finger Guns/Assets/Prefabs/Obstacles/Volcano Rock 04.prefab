@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 5201094840627128460}
   - component: {fileID: 9187866221708404521}
   - component: {fileID: 6369546656730158051}
-  - component: {fileID: -1697932699710713538}
   - component: {fileID: 3569648592842399930}
   - component: {fileID: 5641621637924918857}
+  - component: {fileID: -1274749529451652983}
+  - component: {fileID: -1218220259550453636}
+  - component: {fileID: 1421934234236517612}
   m_Layer: 0
   m_Name: Volcano Rock 04
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4856517158399783478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 144.3601, y: 144.3601, z: 144.3601}
+  m_LocalScale: {x: 297.4941, y: 297.4941, z: 297.4941}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-1697932699710713538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4856517158399783478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc76c4953dee9ab43b1ba8b9a4c01db0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minRotationSpeed: 75
-  maxRotationSpeed: 100
 --- !u!50 &3569648592842399930
 Rigidbody2D:
   serializedVersion: 4
@@ -129,9 +117,52 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0003230346, y: -0.0004937218}
   serializedVersion: 2
   m_Radius: 0.005202489
+--- !u!114 &-1274749529451652983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856517158399783478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71efb00ea17ec841ad499ea0fadc0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &-1218220259550453636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856517158399783478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7b14f8d6674b24981f414588636f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hasMaxLifetime: 1
+  _timeUntilDestroyed: 1
+--- !u!114 &1421934234236517612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856517158399783478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de77b37f92e29304895e3b0ed3e8e311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationsPerSecond: 0.8
+  StartSpinningWhenEnabled: 1
+  spinInDirectionOfMovement: 0
+  rotationDirection: 0
