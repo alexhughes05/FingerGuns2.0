@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 4547262156476235642}
   - component: {fileID: 627343141935558879}
   - component: {fileID: 3409279938283979797}
-  - component: {fileID: 3466007473738257283}
   - component: {fileID: 2069236941864633224}
   - component: {fileID: 2062388724313063870}
   - component: {fileID: -988544765947932688}
+  - component: {fileID: -3400013639053956102}
+  - component: {fileID: 8994198703386098624}
   m_Layer: 17
   m_Name: Volcano Rock 01
   m_TagString: Untagged
@@ -85,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3466007473738257283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3769739913032361408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc76c4953dee9ab43b1ba8b9a4c01db0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minRotationSpeed: 100
-  maxRotationSpeed: 200
 --- !u!50 &2069236941864633224
 Rigidbody2D:
   serializedVersion: 4
@@ -149,3 +136,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+--- !u!114 &-3400013639053956102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3769739913032361408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7b14f8d6674b24981f414588636f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hasMaxLifetime: 1
+  _timeUntilDestroyed: 1
+--- !u!114 &8994198703386098624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3769739913032361408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de77b37f92e29304895e3b0ed3e8e311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationsPerSecond: 1
+  StartSpinningWhenEnabled: 1
+  spinInDirectionOfMovement: 0
+  rotationDirection: 0

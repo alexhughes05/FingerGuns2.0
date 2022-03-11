@@ -486,10 +486,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6601261908118081095, guid: c3e22ed8d3ed0dc44a6f0c763a604c77, type: 3}
-  spawnRateValueType: 0
+  spawnRateValueType: 1
   spawnRateInSeconds: 2
   _minSpawnRateInSeconds: 1
-  _maxSpawnRateInSeconds: 5
+  _maxSpawnRateInSeconds: 2
   _spawnType: 0
   _possibleTransformSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
@@ -498,16 +498,16 @@ MonoBehaviour:
     topLeftTransform: {fileID: 935067687}
     bottomRightTransform: {fileID: 1524873304}
   _possibleRelativeSpawnPoints:
-  - initialVelocity: {x: 15, y: 0}
-    spawnPointValueType: 0
+  - initialVelocity: {x: 10, y: 0}
+    spawnPointValueType: 1
     screenPosition: {x: 0, y: 28.2}
     minScreenWidth: 0
     maxScreenWidth: 0
-    minScreenHeight: 0
-    maxScreenHeight: 0
+    minScreenHeight: 26.139818
+    maxScreenHeight: 45.28875
     screenWidthPosOffset: -5
     screenHeightPosOffset: 0
-    minScreenWidthOffset: 0
+    minScreenWidthOffset: -5
     maxScreenWidthOffset: 0
     minScreenHeightOffset: 0
     maxScreenHeightOffset: 0

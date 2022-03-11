@@ -21,13 +21,16 @@ public class ObstacleSpawneePool_Editor : Editor
     private EditorValueType selectedSpawnRateValueType;
     private EditorValueType selectedSpawnPosValueType;
 
-
+    private float minScaleMultiplier = 0;
+    private float maxScaleMultiplier = 0;
     private float minScreenWidth;
     private float maxScreenWidth;
     private float minScreenHeight;
     private float maxScreenHeight;
-    private readonly float minLimit = 0;
-    private readonly float maxLimit = 100;
+    private readonly float minScreenSliderLimit = 0;
+    private readonly float maxScreenSliderLimit = 100;
+    private readonly float minScaleSliderLimit = 0.1f;
+    private readonly float maxScaleSliderLimit = 10f;
 
     void OnEnable()
     {
@@ -42,6 +45,7 @@ public class ObstacleSpawneePool_Editor : Editor
 
     public override void OnInspectorGUI()
     {
+        Debug.Log("minScaleMultiplier is " + minScaleMultiplier);
         DrawDefaultInspector();
 
         EditorGUILayout.Space();
@@ -83,17 +87,17 @@ public class ObstacleSpawneePool_Editor : Editor
 
             if (selectedSpawnPosType == SpawnPositionType.Relative)
             {
-                ShowSpawnPoints(possibleRelativeToScreenSpawnPoints, "screenPosition", "initialVelocity");
+                ShowSpawnPoints(possibleRelativeToScreenSpawnPoints, "screenPosition");
             }
             else
             {
-                ShowSpawnPoints(possibleTransformSpawnPoints, "transformSpawnPoint", "initialVelocity");
+                ShowSpawnPoints(possibleTransformSpawnPoints, "transformSpawnPoint");
             }
         }
         serializedObject.ApplyModifiedProperties();
     }
 
-    private void ShowSpawnPoints(SerializedProperty spawnPointListProperty, string spawnPositionPropertyName, string velocityPropertyName)
+    private void ShowSpawnPoints(SerializedProperty spawnPointListProperty, string spawnPositionPropertyName)
     {
         for (int i = 0; i < spawnPointListProperty.arraySize; i++)
         {
@@ -157,7 +161,7 @@ public class ObstacleSpawneePool_Editor : Editor
                         EditorGUILayout.LabelField("Max Screen Width:", string.Format("{0:0.0}", maxScreenWidth) + "%");
                         EditorGUILayout.EndHorizontal();
 
-                        EditorGUILayout.MinMaxSlider(ref minScreenWidth, ref maxScreenWidth, minLimit, maxLimit);
+                        EditorGUILayout.MinMaxSlider(ref minScreenWidth, ref maxScreenWidth, minScreenSliderLimit, maxScreenSliderLimit);
 
                         EditorGUILayout.BeginHorizontal();
                         minScreenWidthOffsetProperty.floatValue = EditorGUILayout.FloatField("Left Offset", minScreenWidthOffsetProperty.floatValue);
@@ -173,7 +177,7 @@ public class ObstacleSpawneePool_Editor : Editor
                         EditorGUILayout.LabelField("Max Screen Height:", string.Format("{0:0.0}", maxScreenHeight) + "%");
                         EditorGUILayout.EndHorizontal();
 
-                        EditorGUILayout.MinMaxSlider(ref minScreenHeight, ref maxScreenHeight, minLimit, maxLimit);
+                        EditorGUILayout.MinMaxSlider(ref minScreenHeight, ref maxScreenHeight, minScreenSliderLimit, maxScreenSliderLimit);
 
                         EditorGUILayout.BeginHorizontal();
                         minScreenHeightOffsetProperty.floatValue = EditorGUILayout.FloatField("Top Offset", minScreenHeightOffsetProperty.floatValue);
@@ -201,8 +205,27 @@ public class ObstacleSpawneePool_Editor : Editor
                     EditorGUILayout.Space();
                 }
 
+                var minScaleMultiplierProperty = currentElement.FindPropertyRelative("minScaleMultiplier");
+                var maxScaleMultiplierProperty = currentElement.FindPropertyRelative("maxScaleMultiplier");
+                minScaleMultiplier = minScaleMultiplierProperty.floatValue;
+                maxScaleMultiplier = maxScaleMultiplierProperty.floatValue;
+
+                Debug.Log(maxScaleMultiplier);
+
                 EditorGUILayout.Space();
-                EditorGUILayout.PropertyField(currentElement.FindPropertyRelative(velocityPropertyName));
+                EditorGUILayout.BeginHorizontal();
+                EditorGUIUtility.labelWidth = 140f;
+                EditorGUILayout.LabelField("Min Scale Size:", string.Format("{0:0.0}", minScaleMultiplier) + "X");
+                EditorGUILayout.LabelField("Max Scale Size:", string.Format("{0:0.0}", maxScaleMultiplier) + "X");
+                EditorGUILayout.EndHorizontal();
+
+                EditorGUILayout.MinMaxSlider(ref minScaleMultiplier, ref maxScaleMultiplier, minScaleSliderLimit, maxScaleSliderLimit);
+
+                minScaleMultiplierProperty.floatValue = minScaleMultiplier;
+                maxScaleMultiplierProperty.floatValue = maxScaleMultiplier;
+
+                EditorGUILayout.Space();
+                EditorGUILayout.PropertyField(currentElement.FindPropertyRelative("initialVelocity"));
             }
         }
 
