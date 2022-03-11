@@ -19,6 +19,7 @@ public class ObstacleSpawneePool : GameObjectPool
     [SerializeField]
     [HideInInspector]
     private float _maxSpawnRateInSeconds;
+
     [SerializeField]
     [HideInInspector]
     private SpawnPositionType _spawnType;
@@ -94,6 +95,11 @@ public class ObstacleSpawneePool : GameObjectPool
     {
         return spawnPoint.initialVelocity;
     }
+    public float GetNextSizeMultiplier(SpawnPoint spawnPoint)
+    {
+        return UnityEngine.Random.Range(spawnPoint.minScaleMultiplier, spawnPoint.maxScaleMultiplier);
+    }
+
     public SpawnPoint GetNextSpawnPoint()
     {
         int index = 0;
@@ -119,6 +125,8 @@ public class ObstacleSpawneePool : GameObjectPool
 public abstract class SpawnPoint
 {
     public Vector2 initialVelocity;
+    public float minScaleMultiplier;
+    public float maxScaleMultiplier;
     public EditorValueType spawnPointValueType;
 }
 

@@ -73,8 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ea33b6fdc65f446976129e791227d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPointValue: 150
-  health: 6
+  maxHealth: 0
 --- !u!50 &-6198619261010088333
 Rigidbody2D:
   serializedVersion: 4
@@ -108,8 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44105ac2519ac574a816e26355d7e2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blinkDuration: 0.05
-  timeBetweenBlinks: 0.05
 --- !u!114 &968667510633099354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionAreaCollider: {fileID: 8819690532242642217}
   moveSpeed: 10
+  lockOntoPlayer: 0
+  explosionDelay: 0
 --- !u!114 &737391101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5497,7 +5496,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4331047664353924153}
   - component: {fileID: 6743835547346110589}
-  - component: {fileID: 4900357008446991385}
   m_Layer: 14
   m_Name: DetectionArea
   m_TagString: Untagged
@@ -5535,18 +5533,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
---- !u!114 &4900357008446991385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7506044182772157126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a58461ca455e648b53736e29d02cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7563030219624364607
 GameObject:
   m_ObjectHideFlags: 0

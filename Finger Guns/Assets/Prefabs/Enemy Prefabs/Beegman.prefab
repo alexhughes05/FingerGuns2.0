@@ -39,7 +39,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8389661955161499326}
-  - component: {fileID: 8672677984370239849}
   - component: {fileID: 3509757664442587387}
   m_Layer: 14
   m_Name: DetectionArea
@@ -62,18 +61,6 @@ Transform:
   m_Father: {fileID: 7756172158756723932}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8672677984370239849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243136314715616024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a58461ca455e648b53736e29d02cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &3509757664442587387
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10300,8 +10287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44105ac2519ac574a816e26355d7e2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blinkDuration: 0.05
-  timeBetweenBlinks: 0.05
 --- !u!50 &-4166637548412664815
 Rigidbody2D:
   serializedVersion: 4
@@ -10335,8 +10320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ea33b6fdc65f446976129e791227d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPointValue: 250
-  health: 20
+  maxHealth: 0
 --- !u!114 &8725354098638250197
 MonoBehaviour:
   m_ObjectHideFlags: 0

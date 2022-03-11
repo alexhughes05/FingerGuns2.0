@@ -9,16 +9,13 @@ public class VolcanicRock : MonoBehaviour
     [SerializeField] float maxRotationSpeed;
 
     //Components
-    private Damageable health;
     private Rigidbody2D rb2d;
     private bool firstTime = true;
-    private bool startRotation;
     private float rotationSpeed;
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        health = FindObjectOfType<Damageable>();
     }
 
     private void Update()
@@ -35,15 +32,12 @@ public class VolcanicRock : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            health.TakeDamage(1);
+        if (collider.gameObject.CompareTag("Player"))
             Destroy(gameObject);
-        }
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
+        if (collider.gameObject.layer == LayerMask.NameToLayer("Ground") || collider.gameObject.layer == LayerMask.NameToLayer("Platform"))
             Destroy(gameObject);
     }
 

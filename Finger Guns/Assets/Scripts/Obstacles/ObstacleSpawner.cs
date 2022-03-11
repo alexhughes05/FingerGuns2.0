@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,12 +8,12 @@ public class ObstacleSpawner : MonoBehaviour
     //public
     //[SerializeField] bool looping = false;
 
-    [SerializeField] 
-    ObstacleSpawneePool[] obstaclePools;
-    [Min(0)]
-    [Tooltip("This allows you to ensure a minimum amount of time has passed before the obstacle spawner spawns another obstacle.")]
-    [SerializeField]
-    float minTimeBtwSpawnedObjects;
+    [SerializeField] ObstacleSpawneePool[] obstaclePools;
+    [Min(0)][Tooltip("This allows you to ensure a minimum amount of time has passed before the obstacle spawner spawns another obstacle.")]
+    [SerializeField] float minTimeBtwSpawnedObjects;
+    [Space]
+    [SerializeField] bool executeOnStartup;
+
 
     //Components
     //private Blade blade;
@@ -32,13 +31,15 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Start()
     {
-        foreach (var obstaclePool in obstaclePools)
-            ObstaclePoolsReadyForUse.Add(obstaclePool);
-        StartObstacleSpawner();
+        if (executeOnStartup)
+            StartObstacleSpawner();
     }
 
     public void StartObstacleSpawner()
     {
+        foreach (var obstaclePool in obstaclePools)
+            ObstaclePoolsReadyForUse.Add(obstaclePool);
+
         _currentlySpawning = true;
         _co = StartCoroutine(SpawnRandomObstacleInQueue());
     }
@@ -65,6 +66,7 @@ public class ObstacleSpawner : MonoBehaviour
                 obstacle.SetEndOfLifeTime();
                 SpawnPoint spawnPoint = obstaclePool.GetNextSpawnPoint();
                 obstacle.SetSpawnLocation(obstaclePool.GetNextSpawnLocation(spawnPoint));
+                obstacle.SetScaleSize(obstaclePool.GetNextSizeMultiplier(spawnPoint));
                 obstacle.gameObject.SetActive(true);
                 obstacle.SetVelocity(obstaclePool.GetNextInitialVelocity(spawnPoint));
                 yield return new WaitForSeconds(minTimeBtwSpawnedObjects);
