@@ -4833,10 +4833,6 @@ GameObject:
   - component: {fileID: 5027034942745933080}
   - component: {fileID: 5027034942745933081}
   - component: {fileID: 5027034942745933082}
-  - component: {fileID: 1110519720}
-  - component: {fileID: 4888781915933875874}
-  - component: {fileID: 1110519721}
-  - component: {fileID: 1110519724}
   m_Layer: 0
   m_Name: VolcanoBG
   m_TagString: Untagged
@@ -5209,65 +5205,6 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
---- !u!114 &1110519720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5027034942745933083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0743f0d2857d49e489003be70261dd94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4888781915933875874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5027034942745933083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0743f0d2857d49e489003be70261dd94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1110519721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5027034942745933083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e301a7ac59a5e3447a5c15b022dab5ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnitudeValue: 3
-  roughnessValue: 2
-  fadeInTime: 1
-  fadeOutTime: 1
-  rumbleTimeBeforeSmoke: 2
-  totalEruptionLength: 25
---- !u!114 &1110519724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5027034942745933083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ccfffcfd70f79439cc2e18f8839d4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debriSpanwers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5227685453428756574
 GameObject:
   m_ObjectHideFlags: 0

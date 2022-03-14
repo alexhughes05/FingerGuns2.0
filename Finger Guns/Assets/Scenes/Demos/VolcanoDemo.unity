@@ -781,45 +781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996e50fced0a0524dab6034c66f93515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &515840139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2148207472759455845, guid: e985218e0d9858d4886bbd0ce89f0638,
-    type: 3}
-  m_PrefabInstance: {fileID: 2148207473755013955}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &515840142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515840139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 209dd851a7033434ab428cb019fead34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &515840143
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515840139}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &572644650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,7 +3716,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Volcano Rock Spawners
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 515840142, guid: e985218e0d9858d4886bbd0ce89f0638, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e985218e0d9858d4886bbd0ce89f0638, type: 3}
 --- !u!1001 &3423326311831311118
 PrefabInstance:
