@@ -87,29 +87,4 @@ public class ObstacleSpawner : MonoBehaviour
             }
         }
     }
-
-    //IEnumerator Start()
-    //{
-    //    do
-    //    {
-    //        ObstacleSpawnee obstacle = obstacles[Random.Range(0, obstacles.Length)];
-    //        yield return StartCoroutine(SpawnObstacles(obstacle));
-    //    }
-    //    while (looping && (FindObjectOfType<PlayerHealth>()?.CurrentHealth > 0));
-    //}
-
-    //private IEnumerator SpawnObstacles(ObstacleSpawnee obstacle)
-    //{
-    //    //Projectile shot = shotPool.Get();
-
-
-    //    blade.SelectedPath = blade.getPaths()[UnityEngine.Random.Range(0, blade.getPaths().Length)];
-    //    var spawnHeight = blade.SelectedPath.transform.GetChild(0).position.y;
-
-    //    var spawnPoint = Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, 5));
-    //    spawnPoint.y = spawnHeight;
-    //    Instantiate(obstacle, spawnPoint, Quaternion.identity);
-
-    //    yield return new WaitForSeconds(UnityEngine.Random.Range(blade.getMinSpawnRateInSeconds(), blade.getMaxSpawnRateInSeconds()));
-    //}
 }

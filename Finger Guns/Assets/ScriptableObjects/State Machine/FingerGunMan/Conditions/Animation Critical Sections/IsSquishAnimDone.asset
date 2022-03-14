@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c714dad9eca51a642ac466964546797b, type: 3}
-  m_Name: Disable_Movement_Input_On_Enter
+  m_Script: {fileID: 11500000, guid: fa4527f50ce491d42ac5e2d722d60a88, type: 3}
+  m_Name: IsSquishAnimDone
   m_EditorClassIdentifier: 
-  description: MovementInputDisabled boolean is set to false for the componeent
-  whenToRun: 0
-  desiredValue: 1
+  description: Returns true when an animation event on FGM's Squish animation has
+    been fired. This signals that the animation is over.

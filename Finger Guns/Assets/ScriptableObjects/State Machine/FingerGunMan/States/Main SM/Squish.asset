@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35432205b9a6a374bbbfe6b7cac92179, type: 3}
   m_Name: Squish
   m_EditorClassIdentifier: 
-  _actions: []
+  _actions:
+  - {fileID: 11400000, guid: a0bf708bd42bb7e4e9590baf0991d8ce, type: 2}
+  - {fileID: 11400000, guid: 6d1b2e400c7861e40a21883bd8e508d6, type: 2}
+  - {fileID: 11400000, guid: ecee86a75b2d1954ea40d8d9e64a1e84, type: 2}
+  - {fileID: 11400000, guid: 84a96f813022ed2468114b50ac526409, type: 2}
+  - {fileID: 11400000, guid: 27e9f5084d931954b9664572ef837baf, type: 2}
+  - {fileID: 11400000, guid: 077fda9eec052024290929a804c9ce64, type: 2}
+  - {fileID: 11400000, guid: 77451a2e357a04d41847a71a80e8b0e6, type: 2}
+  - {fileID: 11400000, guid: 64f20a56c68a368428ac9b5e38242a6b, type: 2}

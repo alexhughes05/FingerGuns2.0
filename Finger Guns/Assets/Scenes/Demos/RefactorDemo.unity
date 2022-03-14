@@ -493,12 +493,16 @@ MonoBehaviour:
   _spawnType: 0
   _possibleTransformSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
+    minScaleMultiplier: 0
+    maxScaleMultiplier: 0
     spawnPointValueType: 0
     transformSpawnPoint: {fileID: 935067687}
     topLeftTransform: {fileID: 935067687}
     bottomRightTransform: {fileID: 1524873304}
   _possibleRelativeSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
+    minScaleMultiplier: 1.0443561
+    maxScaleMultiplier: 1.0443561
     spawnPointValueType: 1
     screenPosition: {x: 0, y: 28.2}
     minScreenWidth: 0
@@ -1079,6 +1083,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minKnockbackForce: 50
+--- !u!114 &1753454720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753454718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c82a770b70cdd42b96e375a95ba228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1753454738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,6 +1374,7 @@ MonoBehaviour:
   obstaclePools:
   - {fileID: 427778917}
   minTimeBtwSpawnedObjects: 0
+  executeOnStartup: 1
 --- !u!4 &2026451613
 Transform:
   m_ObjectHideFlags: 0
