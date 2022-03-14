@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c714dad9eca51a642ac466964546797b, type: 3}
-  m_Name: Disable_Movement_Input_On_Enter
+  m_Script: {fileID: 11500000, guid: c2d8cf3f9e11d6f4fa0acbf5a6f0881b, type: 3}
+  m_Name: ShouldSquish
   m_EditorClassIdentifier: 
-  description: MovementInputDisabled boolean is set to false for the componeent
-  whenToRun: 0
-  desiredValue: 1
+  description: This returns the value of the ShouldSquish flag from the Squishable
+    component.

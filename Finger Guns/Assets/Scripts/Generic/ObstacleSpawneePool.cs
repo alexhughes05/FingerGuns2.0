@@ -35,7 +35,6 @@ public class ObstacleSpawneePool : GameObjectPool
 
     //properties
     public bool PoolIsReadyForSpawner { get; set; }
-    public Vector3 InitialVelocity { get; private set; }
     #endregion
 
     private void Awake()
@@ -56,9 +55,9 @@ public class ObstacleSpawneePool : GameObjectPool
         PoolIsReadyForSpawner = true;
     }
 
-    public Vector2 GetNextSpawnLocation(SpawnPoint spawnPoint)
+    public Vector3 GetNextSpawnLocation(SpawnPoint spawnPoint)
     {
-        var spawnLocation = Vector2.zero;
+        var spawnLocation = Vector3.zero;
 
         if (spawnPoint is TransformSpawnPoint currentTransformSpawnPoint)
         {
@@ -89,9 +88,11 @@ public class ObstacleSpawneePool : GameObjectPool
             spawnLocation = cam.ScreenToWorldPoint(spawnLocation);
         }
 
+        spawnLocation.z = spawnPoint.zAxisSpawnPoint;
+
         return spawnLocation;
     }
-    public Vector2 GetNextInitialVelocity(SpawnPoint spawnPoint)
+    public Vector3 GetNextInitialVelocity(SpawnPoint spawnPoint)
     {
         return spawnPoint.initialVelocity;
     }
@@ -125,6 +126,7 @@ public class ObstacleSpawneePool : GameObjectPool
 public abstract class SpawnPoint
 {
     public Vector2 initialVelocity;
+    public float zAxisSpawnPoint;
     public float minScaleMultiplier;
     public float maxScaleMultiplier;
     public EditorValueType spawnPointValueType;

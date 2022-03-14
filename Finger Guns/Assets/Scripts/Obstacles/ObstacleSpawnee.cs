@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class ObstacleSpawnee : MonoBehaviour, IPoolable
@@ -18,6 +16,7 @@ public class ObstacleSpawnee : MonoBehaviour, IPoolable
 
     //Private fields
     private float _endOfLifeTime;
+    private Vector3 initialScale;
 
     //Properties
     public GameObjectPool AssociatedPool { get; set; }
@@ -50,12 +49,17 @@ public class ObstacleSpawnee : MonoBehaviour, IPoolable
     }
     public void SetScaleSize(float sizeMultiplier)
     {
-        transform.localScale = Vector3.one * 100f;
-        transform.localScale *= sizeMultiplier;
+        initialScale = transform.localScale;
+        transform.localScale = initialScale * sizeMultiplier;
     }
     public void SetVelocity(Vector3 initialVelocity)
     {
         _rb2d.velocity = initialVelocity;
+    }
+    private void OnDisable()
+    {
+        if (initialScale != Vector3.zero)
+            transform.localScale = initialScale;
     }
 }
 

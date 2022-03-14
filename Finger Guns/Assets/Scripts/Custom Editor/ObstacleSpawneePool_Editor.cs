@@ -45,7 +45,6 @@ public class ObstacleSpawneePool_Editor : Editor
 
     public override void OnInspectorGUI()
     {
-        Debug.Log("minScaleMultiplier is " + minScaleMultiplier);
         DrawDefaultInspector();
 
         EditorGUILayout.Space();
@@ -210,8 +209,6 @@ public class ObstacleSpawneePool_Editor : Editor
                 minScaleMultiplier = minScaleMultiplierProperty.floatValue;
                 maxScaleMultiplier = maxScaleMultiplierProperty.floatValue;
 
-                Debug.Log(maxScaleMultiplier);
-
                 EditorGUILayout.Space();
                 EditorGUILayout.BeginHorizontal();
                 EditorGUIUtility.labelWidth = 140f;
@@ -226,6 +223,10 @@ public class ObstacleSpawneePool_Editor : Editor
 
                 EditorGUILayout.Space();
                 EditorGUILayout.PropertyField(currentElement.FindPropertyRelative("initialVelocity"));
+
+                EditorGUILayout.Space();
+                EditorGUIUtility.labelWidth = 150.0f;
+                EditorGUILayout.PropertyField(currentElement.FindPropertyRelative("zAxisSpawnPoint"), new GUIContent("Z Axis: "), GUILayout.MaxWidth(270));
             }
         }
 
