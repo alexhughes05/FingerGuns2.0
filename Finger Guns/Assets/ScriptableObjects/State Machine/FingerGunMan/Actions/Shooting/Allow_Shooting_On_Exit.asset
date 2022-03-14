@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c714dad9eca51a642ac466964546797b, type: 3}
-  m_Name: Enable_Movement_Input_On_Exit
+  m_Script: {fileID: 11500000, guid: 88ebfece7e0e30744925d2d3c2086a30, type: 3}
+  m_Name: Allow_Shooting_On_Exit
   m_EditorClassIdentifier: 
-  description: MovementInputDisabled boolean on the MoveBehaviour script is set to
-    false, allowing movement control from the gameobject the script is attached to.
+  description: Sets the allowShooting flag from FgmInputHandler to true
   whenToRun: 1
-  desiredValue: 0
+  allowShooting: 1

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -988544765947932688}
   - component: {fileID: -3400013639053956102}
   - component: {fileID: 8994198703386098624}
+  - component: {fileID: -3798625208071864896}
   m_Layer: 17
   m_Name: Volcano Rock 01
   m_TagString: Untagged
@@ -166,3 +167,15 @@ MonoBehaviour:
   StartSpinningWhenEnabled: 1
   spinInDirectionOfMovement: 0
   rotationDirection: 0
+--- !u!114 &-3798625208071864896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3769739913032361408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209dd851a7033434ab428cb019fead34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c714dad9eca51a642ac466964546797b, type: 3}
-  m_Name: Disable_Movement_Input_On_Enter
+  m_Script: {fileID: 11500000, guid: ebf6a597f3d791c4b95c60a0e2e4d380, type: 3}
+  m_Name: Set_Squish_Anim_On_Enter
   m_EditorClassIdentifier: 
-  description: MovementInputDisabled boolean is set to false for the componeent
+  description: 
+  parameterType: 3
+  parameterName: Squish
+  boolValue: 0
+  intValue: 0
+  floatValue: 0
+  usedInStateMachine: 1
   whenToRun: 0
-  desiredValue: 1

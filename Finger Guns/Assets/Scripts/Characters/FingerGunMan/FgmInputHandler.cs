@@ -18,6 +18,7 @@ public class FgmInputHandler : MonoBehaviour
     private bool _endOfBackflipCriticalSection;
     private bool _endOfSomersaultCriticalSection;
     private bool _endOfStandUpCriticalSection;
+    private bool _endOfSquishCriticalSection;
 
     private XDirections _moveDirection;
 
@@ -28,6 +29,7 @@ public class FgmInputHandler : MonoBehaviour
     public bool CrouchInput { get; private set; }
     public bool SomersaultInput { get; set; }
     public bool BackflipInput { get; set; }
+    public bool AllowShooting { get; set; } = true;
     public float JumpTimeStamp { get; set; } = Mathf.NegativeInfinity;
     public float SlideTimeStamp { get; set; } = Mathf.NegativeInfinity;
     public float SomersaultTimeStamp { get; set; } = Mathf.NegativeInfinity;
@@ -77,7 +79,8 @@ public class FgmInputHandler : MonoBehaviour
 
     private void OnShoot(Vector3 mousePos)
     {
-        _shoot.Attack(mousePos);
+        if (AllowShooting)
+            _shoot.Attack(mousePos);
     }
 
     private void OnStartMovingInitiated(XDirections moveDirection)
@@ -145,11 +148,13 @@ public class FgmInputHandler : MonoBehaviour
     public bool IsBackflipAnimDone() => _endOfBackflipCriticalSection;
     public bool IsSomersaultAnimDone() => _endOfSomersaultCriticalSection;
     public bool IsStandUpAnimDone() => _endOfStandUpCriticalSection;
+    public bool IsSquishAnimDone() => _endOfSquishCriticalSection;
     public void SetEndOfJumpAnim(int value) => _endOfJumpCriticalSection = Convert.ToBoolean(value);
     public void SetEndOfLandingAnim(int value) => _endOfLandingCriticalSection = Convert.ToBoolean(value);
     public void SetEndOfBackflipAnim(int value) => _endOfBackflipCriticalSection = Convert.ToBoolean(value);
     public void SetEndOfSomersaultAnim(int value) => _endOfSomersaultCriticalSection = Convert.ToBoolean(value);
     public void SetEndOfStandUpAnim(int value) => _endOfStandUpCriticalSection = Convert.ToBoolean(value);
+    public void SetEndOfSquishAnim(int value) => _endOfSquishCriticalSection = Convert.ToBoolean(value);
     #endregion
 }
 
