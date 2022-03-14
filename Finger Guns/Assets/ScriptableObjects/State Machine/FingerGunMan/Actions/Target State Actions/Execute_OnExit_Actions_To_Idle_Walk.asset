@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fbc95798ef0b947b998a1ee95cc600, type: 3}
   m_Name: Execute_OnExit_Actions_To_Idle_Walk
   m_EditorClassIdentifier: 
+  description: 
   whenToRun: 1
   actionsToExecute:
   - {fileID: 11400000, guid: 74cf4b28aa3cf3f4b823fe3f3b84e1ba, type: 2}
   targetStates:
   - {fileID: 11400000, guid: e45479476ba11f247b4790a0a764a710, type: 2}
   - {fileID: 11400000, guid: 9ac94cc3e31cbc24c8495bfdb9034c96, type: 2}
+  - {fileID: 11400000, guid: 79e6be67a24858a4db834bfdf848cd01, type: 2}
+  - {fileID: 11400000, guid: dc3dc2c7d9de1e84481744d8893e3132, type: 2}
+  - {fileID: 11400000, guid: 41714f4160819244b84a99fd1127e83f, type: 2}
