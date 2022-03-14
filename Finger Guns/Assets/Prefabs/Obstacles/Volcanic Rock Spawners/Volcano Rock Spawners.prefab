@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2148207472605380648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2148207473836691256}
@@ -73,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2148207472613057990}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2148207472958051497}
@@ -106,6 +106,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2148207472759455844}
   - component: {fileID: 2148207472759455851}
+  - component: {fileID: 515840143}
+  - component: {fileID: 515840142}
   m_Layer: 0
   m_Name: Volcano Rock 01 Pool
   m_TagString: Untagged
@@ -142,17 +144,23 @@ MonoBehaviour:
   prefab: {fileID: 3769739913032361408, guid: 00663dd220ede0742aaf632143d14687, type: 3}
   spawnRateValueType: 1
   spawnRateInSeconds: 2
-  _minSpawnRateInSeconds: 0.3
-  _maxSpawnRateInSeconds: 0.7
+  _minSpawnRateInSeconds: 0.1
+  _maxSpawnRateInSeconds: 0.3
   _spawnType: 0
   _possibleTransformSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
+    zAxisSpawnPoint: 0
+    minScaleMultiplier: 0
+    maxScaleMultiplier: 0
     spawnPointValueType: 0
     transformSpawnPoint: {fileID: 0}
     topLeftTransform: {fileID: 0}
     bottomRightTransform: {fileID: 0}
   _possibleRelativeSpawnPoints:
-  - initialVelocity: {x: 0, y: -15}
+  - initialVelocity: {x: 0, y: -20}
+    zAxisSpawnPoint: -5
+    minScaleMultiplier: 0.59944296
+    maxScaleMultiplier: 0.99230015
     spawnPointValueType: 1
     screenPosition: {x: 0, y: 28.2}
     minScreenWidth: 0
@@ -161,10 +169,43 @@ MonoBehaviour:
     maxScreenHeight: 100
     screenWidthPosOffset: -5
     screenHeightPosOffset: 0
-    minScreenWidthOffset: 0
-    maxScreenWidthOffset: 0
+    minScreenWidthOffset: -50
+    maxScreenWidthOffset: 50
     minScreenHeightOffset: 5
     maxScreenHeightOffset: 0
+--- !u!50 &515840143
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472759455845}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &515840142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148207472759455845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209dd851a7033434ab428cb019fead34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2148207472958051498
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,17 +252,23 @@ MonoBehaviour:
   prefab: {fileID: 1813584301085172686, guid: 12c7865ee4a6a0c4ea525815fd74900c, type: 3}
   spawnRateValueType: 1
   spawnRateInSeconds: 2
-  _minSpawnRateInSeconds: 0.2
-  _maxSpawnRateInSeconds: 0.6
+  _minSpawnRateInSeconds: 0.1
+  _maxSpawnRateInSeconds: 0.2
   _spawnType: 0
   _possibleTransformSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
+    zAxisSpawnPoint: 0
+    minScaleMultiplier: 0
+    maxScaleMultiplier: 0
     spawnPointValueType: 0
     transformSpawnPoint: {fileID: 0}
     topLeftTransform: {fileID: 0}
     bottomRightTransform: {fileID: 0}
   _possibleRelativeSpawnPoints:
-  - initialVelocity: {x: 0, y: -21}
+  - initialVelocity: {x: 0, y: -23}
+    zAxisSpawnPoint: -5
+    minScaleMultiplier: 0.7966825
+    maxScaleMultiplier: 1.1895397
     spawnPointValueType: 1
     screenPosition: {x: 0, y: 28.2}
     minScreenWidth: 0
@@ -230,8 +277,8 @@ MonoBehaviour:
     maxScreenHeight: 100
     screenWidthPosOffset: -5
     screenHeightPosOffset: 0
-    minScreenWidthOffset: 0
-    maxScreenWidthOffset: 0
+    minScreenWidthOffset: -50
+    maxScreenWidthOffset: 50
     minScreenHeightOffset: 5
     maxScreenHeightOffset: 0
 --- !u!1 &2148207473180154049
@@ -259,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2148207473180154049}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2148207473515776591}
@@ -328,17 +375,23 @@ MonoBehaviour:
   prefab: {fileID: 2817277289047744509, guid: 75c8fd2f9c47a9f43b312621ac9917db, type: 3}
   spawnRateValueType: 1
   spawnRateInSeconds: 2
-  _minSpawnRateInSeconds: 0.5
-  _maxSpawnRateInSeconds: 1
+  _minSpawnRateInSeconds: 0.3
+  _maxSpawnRateInSeconds: 0.5
   _spawnType: 0
   _possibleTransformSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
+    zAxisSpawnPoint: 0
+    minScaleMultiplier: 0
+    maxScaleMultiplier: 0
     spawnPointValueType: 0
     transformSpawnPoint: {fileID: 0}
     topLeftTransform: {fileID: 0}
     bottomRightTransform: {fileID: 0}
   _possibleRelativeSpawnPoints:
   - initialVelocity: {x: 0, y: -18}
+    zAxisSpawnPoint: -5
+    minScaleMultiplier: 1.0229237
+    maxScaleMultiplier: 1.3057809
     spawnPointValueType: 1
     screenPosition: {x: 0, y: 28.2}
     minScreenWidth: 0
@@ -347,8 +400,8 @@ MonoBehaviour:
     maxScreenHeight: 100
     screenWidthPosOffset: -5
     screenHeightPosOffset: 0
-    minScreenWidthOffset: 0
-    maxScreenWidthOffset: 0
+    minScreenWidthOffset: -50
+    maxScreenWidthOffset: 50
     minScreenHeightOffset: 5
     maxScreenHeightOffset: 0
 --- !u!1 &2148207473731212238
@@ -376,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2148207473731212238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.20334, y: -42.31502, z: 7.803691}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2148207472759455844}
@@ -445,17 +498,23 @@ MonoBehaviour:
   prefab: {fileID: 4856517158399783478, guid: dbe377feda3781e4a95afcb30d6a3fb6, type: 3}
   spawnRateValueType: 1
   spawnRateInSeconds: 2
-  _minSpawnRateInSeconds: 0.4
-  _maxSpawnRateInSeconds: 0.8
+  _minSpawnRateInSeconds: 0.2
+  _maxSpawnRateInSeconds: 0.5
   _spawnType: 0
   _possibleTransformSpawnPoints:
   - initialVelocity: {x: 10, y: 0}
+    zAxisSpawnPoint: 0
+    minScaleMultiplier: 0
+    maxScaleMultiplier: 0
     spawnPointValueType: 0
     transformSpawnPoint: {fileID: 0}
     topLeftTransform: {fileID: 0}
     bottomRightTransform: {fileID: 0}
   _possibleRelativeSpawnPoints:
-  - initialVelocity: {x: 0, y: -25}
+  - initialVelocity: {x: 0, y: -28}
+    zAxisSpawnPoint: -5
+    minScaleMultiplier: 0.3671428
+    maxScaleMultiplier: 0.7128571
     spawnPointValueType: 1
     screenPosition: {x: 0, y: 28.2}
     minScreenWidth: 0
@@ -464,8 +523,8 @@ MonoBehaviour:
     maxScreenHeight: 100
     screenWidthPosOffset: -5
     screenHeightPosOffset: 0
-    minScreenWidthOffset: 0
-    maxScreenWidthOffset: 0
+    minScreenWidthOffset: -50
+    maxScreenWidthOffset: 50
     minScreenHeightOffset: 5
     maxScreenHeightOffset: 0
 --- !u!1 &8355235781481371696
