@@ -106,7 +106,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2148207472759455844}
   - component: {fileID: 2148207472759455851}
-  - component: {fileID: 515840143}
   m_Layer: 0
   m_Name: Volcano Rock 01 Pool
   m_TagString: Untagged
@@ -172,27 +171,6 @@ MonoBehaviour:
     maxScreenWidthOffset: 50
     minScreenHeightOffset: 5
     maxScreenHeightOffset: 0
---- !u!50 &515840143
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2148207472759455845}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &2148207472958051498
 GameObject:
   m_ObjectHideFlags: 0
